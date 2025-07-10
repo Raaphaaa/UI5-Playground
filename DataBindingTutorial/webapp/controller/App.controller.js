@@ -161,18 +161,17 @@ sap.ui.define(
         if (aCards.length > 0) {
           aCards[aCards.length - 1].topCard = false;
         }
-        aCards.push(
-          {
-            "enhancement": this.getRandomEnhancement(),
-            "color": this.getRandomColor(),
-            "value": this.getRandomValue(),
-            "seal": this.getRandomSeal(),
-            "edition": this.getRandomEdition(),
-            "topCard": true,
-            "selected": false
-          });
+        aCards.push({
+          enhancement: this.getRandomEnhancement(),
+          color: this.getRandomColor(),
+          value: this.getRandomValue(),
+          seal: this.getRandomSeal(),
+          edition: this.getRandomEdition(),
+          topCard: true,
+          selected: false,
+        });
         oCards.setProperty("/cards", aCards);
-        oCards.setProperty("/length", aCards.length)
+        oCards.setProperty("/length", aCards.length);
       },
 
       onDiscardCards() {
@@ -190,7 +189,7 @@ sap.ui.define(
           aCards[aCards.length - 1].topCard = true;
         }
         oCards.setProperty("/cards", aCards);
-        oCards.setProperty("/length", aCards.length)
+        oCards.setProperty("/length", aCards.length);
       },
 
       onSortSuitwise() {
@@ -227,10 +226,6 @@ sap.ui.define(
       onDropCards(oEvent) {
         let oDragged = oEvent.getParameter("draggedControl");
         let oDropped = oEvent.getParameter("droppedControl");
-
-
-        let aCards = this.getView().getModel("cards");
-
       },
 
       getRandomEnhancement() {
