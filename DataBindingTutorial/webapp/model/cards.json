@@ -1,0 +1,44 @@
+{
+  "length": 4,
+  "totalwidth": 700,
+  "height": 150,
+  "width": 100,
+  "cards": [
+    {
+      "enhancement": "Base",
+      "color": "D",
+      "value": 2,
+      "seal": "red",
+      "edition": "poly",
+      "topCard": false,
+      "selected": false
+    },
+    {
+      "enhancement": "Bonus",
+      "color": "C",
+      "value": 3,
+      "seal": "blue",
+      "edition": "",
+      "topCard": false,
+      "selected": false
+    },
+    {
+      "enhancement": "Gold",
+      "color": "H",
+      "value": 11,
+      "seal": "purple",
+      "edition": "",
+      "topCard": false,
+      "selected": false
+    },
+    {
+      "enhancement": "Glass",
+      "color": "S",
+      "value": 14,
+      "seal": "gold",
+      "edition": "poly",
+      "topCard": false,
+      "selected": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "firstName": "Harry",
+  "lastName": "Hawk",
+  "enabled": true,
+  "address": {
+    "street": "Wasserstraße 3",
+    "city": "Mülheim an der Ruhr",
+    "zip": "45470",
+    "country": "Germany"
+  },
+  "salesAmount": 12345.6789,
+  "priceThreshold": 20,
+  "currencyCode": "EUR"
+}

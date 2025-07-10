@@ -1,0 +1,33 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    core:require="{Currency: 'sap/ui/model/type/Currency'}">
+    <ObjectListItem
+        id="productExtended"
+        press=".onItemSelected"
+        type="Active"
+        title="{products>ProductName}"
+        number="{
+					parts: [
+                        {path: 'products>UnitPrice'},
+                        {path: '/currencyCode'}
+                    ],
+                    type: 'Currency',
+                    formatOptions: { showMeasure: false }
+                }"
+        numberUnit="{/currencyCode}"
+        numberState="{= ${products>UnitPrice} > ${/priceThreshold} ? 'Error' : 'Success'}">
+        <attributes>
+            <ObjectAttribute text="{products>QuantityPerUnit}" />
+            <ObjectAttribute title="{i18n>stockValue}"
+                text="{
+									parts: [
+										{path: 'products>UnitPrice'},
+										{path: 'products>UnitsInStock'},
+										{path: '/currencyCode'}
+									],
+									formatter: '.formatStockValue'
+								}" />
+        </attributes>
+    </ObjectListItem>
+</core:FragmentDefinition>

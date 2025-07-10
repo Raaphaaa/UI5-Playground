@@ -1,0 +1,295 @@
+<mvc:View
+	controllerName="ui5.databinding.controller.App"
+	xmlns:dnd="sap.ui.core.dnd"
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:form="sap.ui.layout.form"
+	xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	core:require="{Currency: 'sap/ui/model/type/Currency'}">
+	<Shell
+		backgroundImage="pictures/Background.jpg"
+		backgroundOpacity="1"
+	>
+		<Page
+			title="{i18n>pageTitle}"
+			titleAlignment="Center">
+			<Panel
+				headerText="{i18n>panelHeaderText}"
+				class="sapUiSmallMargin"
+				width="auto"
+				expandable="true">
+				<HBox>
+					<form:SimpleForm editable="true" layout="ColumnLayout">
+						<Label text="{i18n>firstName}" />
+						<Input
+							value="{/firstName}"
+							width="200px"
+							valueLiveUpdate="true"
+							enabled="{/enabled}" />
+
+						<Label text="{i18n>lastName}" />
+						<Input
+							value="{/lastName}"
+							width="200px"
+							valueLiveUpdate="true"
+							enabled="{/enabled}" />
+
+						<Label text="{i18n>enabled}" />
+						<CheckBox selected="{/enabled}"></CheckBox>
+					</form:SimpleForm>
+					<l:VerticalLayout>
+						<Label labelFor="idAddressFormattedText" text="{i18n>address}" />
+						<FormattedText class="sapUiSmallMarginBottom"
+							htmlText="{/address/street}&lt;br>{/address/zip} {/address/city}&lt;br>{/address/country}"
+							id="idAddressFormattedText"
+							width="200px" />
+						<Link
+							href="{ 
+								formatter: '.formatMail',
+								parts: [ 
+									'/firstName',
+									'/lastName' 
+								]
+							}"
+							text="{i18n>sendEmail}" />
+					</l:VerticalLayout>
+					<l:VerticalLayout>
+						<Label labelFor="salesAmount" text="{i18n>salesAmount}:" />
+						<Input
+							id="salesAmount" enabled="{/enabled}"
+							description="{/currencyCode}"
+							value="{ 
+								parts: [ {path: '/salesAmount'}, {path: '/currencyCode'} ],
+								type: 'Currency', 
+								formatOptions: {showMeasure: false} }"
+							width="200px" />
+					</l:VerticalLayout>
+				</HBox>
+			</Panel>
+			<Panel headerText="{i18n>panel3HeaderText}" class="sapUiSmallMargin"
+				width="auto"
+				expandable="true">
+				<Button text="{i18n>hideEntries}"
+					press=".onPressHideEntries" />
+				<Button text="{i18n>showEntries}"
+					press=".onPressShowEntries" />
+				<List
+					showSeparators="None"
+					id="ProductList"
+					headerText="{i18n>productListTitle}"
+					mode="MultiSelect"
+					selectionChange='.onSelectionChange'
+					items="{
+						path: 'products>/Products',
+						factory: '.productListFactory',
+						sorter:
+						{
+							path: 'ProductName'
+						}
+					}">
+					<dependents>
+						<core:Fragment fragmentName="ui5.databinding.view.ProductExtended"
+							type="XML" />
+						<core:Fragment fragmentName="ui5.databinding.view.ProductSimple"
+							type="XML" />
+					</dependents>
+				</List>
+			</Panel>
+			<Panel id="productStatsPanel" headerText="{i18n>productStats}"
+				class="sapUiSmallMargin"
+				width="auto"
+				expandable="true">
+				<form:SimpleForm editable="true" layout="ColumnLayout">
+					<Label text="{i18n>totalPrice}" />
+					<Text
+						text="{
+							parts: [
+								{path: 'stats>/totalPrice'},
+								{path: '/currencyCode' }
+							],
+							type: 'Currency'
+						}" />
+
+					<Label text="{i18n>averagePrice}" />
+					<Text
+						text="{
+							parts: [
+								{path: 'stats>/averagePrice' },
+								{path: '/currencyCode' }
+							],
+							type: 'Currency'
+						}" />
+
+					<Label text="{i18n>totalUnitsInStock}" />
+					<Text text="{stats>/totalUnitsInStock}" />
+
+					<Label text="{i18n>averageUnitsInStock}" />
+					<Text text="{stats>/averageUnitsInStock}" />
+
+					<Label text="{i18n>pricePerUnit}" />
+					<Text
+						text="{
+							parts: [
+								{path: 'stats>/pricePerUnit'},
+								{path: '/currencyCode'}
+								],
+							type: 'Currency'
+						}" />
+
+					<Label text="{i18n>discontinuedItems}" />
+					<Text text="{stats>/discontinuedItems}" />
+				</form:SimpleForm>
+			</Panel>
+			<Panel id="productDetailsPanel" headerText="{i18n>panel4HeaderText}"
+				class="sapUiSmallMargin" width="auto"
+				expandable="true">
+				<form:SimpleForm editable="true" layout="ColumnLayout">
+					<Label text="{i18n>ProductID}" />
+					<Input
+						value="{products>ProductID}"
+						enabled="{= !${products>Discontinued}}" />
+
+
+					<Label text="{i18n>ProductName}" />
+					<Input
+						value="{products>ProductName}"
+						enabled="{= !${products>Discontinued}}" />
+
+					<Label text="{i18n>QuantityPerUnit}" />
+					<Input
+						value="{products>QuantityPerUnit}"
+						enabled="{= !${products>Discontinued}}" />
+
+					<Label text="{i18n>UnitPrice}" />
+					<Input
+						value="{products>UnitPrice}"
+						enabled="{= !${products>Discontinued}}" />
+
+					<Label text="{i18n>UnitsInStock}" />
+					<Input
+						value="{products>UnitsInStock}"
+						enabled="{= !${products>Discontinued}}" />
+
+					<Label text="{i18n>Discontinued}" />
+					<CheckBox selected="{products>Discontinued}" />
+				</form:SimpleForm>
+			</Panel>
+			<Panel id="playground" headerText="{i18n>playgroundHeaderText}"
+				class="sapUiSmallMargin" width="auto"
+				expandable="true"
+				expanded="true">
+					<VBox
+						>
+						<Text text="{i18n>totalWidth}"/>
+						<Slider 
+							value='{cards>/totalwidth}'
+							min="0"
+							max="1000"
+							width="1000px">
+						</Slider>
+						<HBox>
+							<Button
+								press=".onDrawCard"
+								text="{i18n>drawCard}"
+								class="sapUiResponsiveMargin"/>
+							<Button
+								press=".onDiscardCards"
+								text="{i18n>discardCards}"
+								class="sapUiResponsiveMargin"/>
+							<Button
+								press=".onSortRankwise"
+								text="{i18n>sortRankwise}"
+								class="sapUiResponsiveMargin"/>
+							<Button
+								press=".onSortSuitwise"
+								text="{i18n>sortSuitwise}"
+								class="sapUiResponsiveMargin"/>
+						</HBox>
+
+
+						<HBox width="{cards>/totalwidth}px"
+							height="{= ${cards>/height} * 1.2}px"
+							alignItems="End"
+							items="{
+									path: 'cards>/cards'
+								}">
+							<VBox
+								height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
+								width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
+									> ${cards>/width} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1)}px">
+
+								<VBox height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{
+											formatter: '.formatEnhancement',
+											parts: [
+												'cards>enhancement'
+												] 
+											}" />
+								</VBox>
+								
+								<VBox 
+									height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{=
+											${cards>enhancement} === 'Stone' ? '' :
+											${ 
+												formatter: '.formatValue',
+												parts: [
+													'cards>color',
+													'cards>value'
+													] 
+											} }" />
+								</VBox>
+								<VBox 
+									height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{
+											formatter: '.formatEdition',
+											parts: [
+												'cards>edition'
+												] 
+											}" />
+								</VBox>
+								<VBox 
+									height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{
+											formatter: '.formatSeal',
+											parts: [
+												'cards>seal'
+												] 
+											}" >
+											
+									</Image>
+								</VBox>
+							</VBox>
+
+						</HBox>
+						
+					</VBox>
+			</Panel>
+		</Page>
+	</Shell>
+</mvc:View>
