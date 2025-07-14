@@ -220,46 +220,54 @@
 							}">
 						<dragDropConfig>
 							<dnd:DragInfo
-								sourceAggregation="items" />
+								groupName="cards" />
 							<dnd:DropInfo
-								targetAggregation="items"
+								groupName="cards"
 								drop="onDrop" />
 							<dnd:DragDropInfo
-								sourceAggregation="items"
-								targetAggregation="items"
 								dropPosition="Between"
 								drop="onDrop" />
 						</dragDropConfig>
-						<items>
-							<VBox
-								height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
-								width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
+						<VBox
+							height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
+							width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
 								> ${cards>/width} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1)}px">
 
-								<VBox height="0"
-									width="0">
-									<Image
-										mode="Image"
-										height="{cards>/height}px"
-										width="{cards>/width}px"
-										press=".onPressImage"
-										src="{
+							<dragDropConfig>
+								<dnd:DragInfo
+									enabled="false" />
+								<dnd:DropInfo
+									groupName="cards"
+									drop="onDrop" />
+								<dnd:DragDropInfo
+									dropPosition="Between"
+									drop="onDrop" />
+							</dragDropConfig>
+							<VBox height="0"
+								width="0">
+								<Image
+									mode="Image"
+									height="{cards>/height}px"
+									width="{cards>/width}px"
+									press=".onPressImage"
+									src="{
 										formatter: '.formatEnhancement',
 										parts: [
 											'cards>enhancement'
 											] 
-										}" />
-								</VBox>
+										}">
+								</Image>
+							</VBox>
 
-								<VBox
-									height="0"
-									width="0">
-									<Image
-										mode="Image"
-										height="{cards>/height}px"
-										width="{cards>/width}px"
-										press=".onPressImage"
-										src="{=
+							<VBox
+								height="0"
+								width="0">
+								<Image
+									mode="Image"
+									height="{cards>/height}px"
+									width="{cards>/width}px"
+									press=".onPressImage"
+									src="{=
 										${cards>enhancement} === 'Stone' ? '' :
 										${ 
 											formatter: '.formatValue',
@@ -267,41 +275,53 @@
 												'cards>color',
 												'cards>value'
 												] 
-										} }" />
-								</VBox>
-								<VBox
-									height="0"
-									width="0">
-									<Image
-										mode="Image"
-										height="{cards>/height}px"
-										width="{cards>/width}px"
-										press=".onPressImage"
-										src="{
+										} }">
+								</Image>
+							</VBox>
+							<VBox
+								height="0"
+								width="0">
+								<Image
+									mode="Image"
+									height="{cards>/height}px"
+									width="{cards>/width}px"
+									press=".onPressImage"
+									src="{
 										formatter: '.formatEdition',
 										parts: [
 											'cards>edition'
 											] 
-										}" />
-								</VBox>
-								<VBox
-									height="0"
-									width="0">
-									<Image
-										mode="Image"
-										height="{cards>/height}px"
-										width="{cards>/width}px"
-										press=".onPressImage"
-										src="{
+										}">
+								</Image>
+							</VBox>
+							<VBox
+								height="0"
+								width="0">
+
+								<Image
+									mode="Image"
+									height="{cards>/height}px"
+									width="{cards>/width}px"
+									press=".onPressImage"
+									src="{
 										formatter: '.formatSeal',
 										parts: [
 											'cards>seal'
 											] 
 										}">
-									</Image>
-								</VBox>
+
+									<dragDropConfig>
+										<dnd:DragInfo
+											groupName="cards" />
+										<dnd:DropInfo
+											enabled="false" />
+										<dnd:DragDropInfo
+											dropPosition="Between"
+											drop="onDrop" />
+									</dragDropConfig>
+								</Image>
 							</VBox>
-						</items>
+						</VBox>
 					</HBox>
 				</VBox>
 			</Panel>

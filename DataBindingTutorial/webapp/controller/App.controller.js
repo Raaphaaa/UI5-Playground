@@ -97,6 +97,19 @@ sap.ui.define(
       onDrop(oEvent) {
         let oDragged = oEvent.getParameter("draggedControl");
         let oDropped = oEvent.getParameter("droppedControl");
+
+        let oDraggedCard = oDragged.getBindingContext("cards").getObject();
+        let oDroppedCard = oDropped.getBindingContext("cards").getObject();
+
+        let oCards = this.getView().getModel("cards");
+        let aCards = oCards.getProperty("/cards");
+        let pos1 = aCards.indexOf(oDraggedCard);
+        let pos2 = aCards.indexOf(oDroppedCard);
+        aCards[pos1] = oDroppedCard;
+        aCards[pos1].topCard = oDraggedCard.topCard;
+        aCards[pos2] = oDraggedCard;
+        aCards[pos2].topCard = oDroppedCard.topCard;
+        oCards.setProperty("/cards", aCards);
       },
       updateStats() {
         const aProductListItems = this.byId("ProductList").getItems();
