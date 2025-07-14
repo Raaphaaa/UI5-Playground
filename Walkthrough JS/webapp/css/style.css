@@ -1,0 +1,14 @@
+/* default font size is 16px, when specifying the margin-left/right
+we can use 2px as the value or 0.125rem since 16*0.125 = 2px */
+html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+  margin-right: 0.125rem;
+}
+
+html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+  margin-left: 0.125rem;
+}
+
+.myAppDemoWT .myCustomText {
+  display: inline-block;
+  font-weight: bold;
+}

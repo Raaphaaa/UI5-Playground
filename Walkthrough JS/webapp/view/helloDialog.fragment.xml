@@ -1,0 +1,21 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core">
+    <Dialog
+        id="helloDialog"
+        title="Hello {/recipient/name}">
+        <content>
+            <core:Icon
+                src="sap-icon://hello-world"
+                size="8rem"
+                class="sapUiMediumMargin"
+                tooltip="Ich bin ein Icon im Content vom Dialog" />
+        </content>
+        <beginButton>
+            <Button
+                text="{i18n>dialogCloseButtonText}"
+                press=".onCloseDialog"
+                tooltip="Ich bin ein Button im Dialog" />
+        </beginButton>
+    </Dialog>
+</core:FragmentDefinition>

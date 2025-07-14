@@ -1,0 +1,40 @@
+<mvc:View
+    controllerName="ui5.walkthrough.controller.HelloPanel"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc">
+    <Panel
+        headerText="{i18n>helloPanelTitle}"
+        class="sapUiResponsiveMargin"
+        width="auto"
+    >
+        <content>
+            <Input
+                value="{/recipient/name}"
+                tooltip="Ich bin ein Input-Feld mit LiveUpdate und verweise auf /recipient/name"
+                valueLiveUpdate="true"
+                width="20%" />
+            <Button
+                id="helloDialogButton"
+                text="{i18n>openDialogButtonText}"
+                tooltip="Ich bin ein Button der onPress den Dialog öffnet"
+                icon="sap-icon://world"
+                press=".onOpenDialog"
+                class="sapUiSmallMarginEnd" />
+            <Button
+                text="{i18n>showHelloButtonText}"
+                press=".onShowHello"
+                tooltip="Ich bin ein Button im Content von einem Panel von einer Page von einer Komponente :D"
+                class="myCustomButton" />
+            <Text
+                text="{
+                    parts: ['/recipient/name'],
+                    formatter: '.showHelloText' }"
+                tooltip="Ich bin ein Text-Feld und zeige u. a. recipient/name an"
+                class="sapUiSmallMargin" />
+            <FormattedText
+                htmlText="Hello {/recipient/name} (Formatted Text)"
+                tooltip="Ich bin ein Formatted Text-Feld und ziehe meine Eigenschaften aus den css-Klassen"
+                class="sapUiSmallmargin sapThemeHighlight -asColor myCustomText" />
+        </content>
+    </Panel>
+</mvc:View>

@@ -1,0 +1,44 @@
+{
+    "Invoices": [
+        {
+            "ProductName": "Pineapple",
+            "Quantity": 6,
+            "ExtendedPrice": 3.0,
+            "ShipperName": "MIBS AG",
+            "ShippedDate": "2025-06-01T00:00:00",
+            "Status": "A"
+        },
+        {
+            "ProductName": "Milk",
+            "Quantity": 9,
+            "ExtendedPrice": 50.50,
+            "ShipperName": "MIBS AG",
+            "ShippedDate": "2025-06-02T00:00:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Ravioli",
+            "Quantity": 4,
+            "ExtendedPrice": 0.3,
+            "ShipperName": "BENEFIT",
+            "ShippedDate": "2025-06-03T00:00:00",
+            "Status": "C"
+        },
+        {
+            "ProductName": "Salad",
+            "Quantity": 20,
+            "ExtendedPrice": 1.0,
+            "ShipperName": "BENEFIT",
+            "ShippedDate": "2025-06-04T00:00:00",
+            "Status": "B"
+        },
+        {
+            "ProductName": "Donut",
+            "Quantity": 5,
+            "ExtendedPrice": 6.0,
+            "ShipperName": "MIBS AG",
+            "ShippedDate": "2025-06-05T00:00:00",
+            "Status": "A"
+        }
+    ]
+}
