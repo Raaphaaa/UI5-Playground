@@ -1,4 +1,4 @@
-<mvc:View
+<mvc:View xmlns:table="sap.ui.mdc.table"
 	controllerName="ui5.databinding.controller.App"
 	xmlns:dnd="sap.ui.core.dnd"
 	xmlns="sap.m"
@@ -9,8 +9,7 @@
 	core:require="{Currency: 'sap/ui/model/type/Currency'}">
 	<Shell
 		backgroundImage="pictures/Background.jpg"
-		backgroundOpacity="1"
-	>
+		backgroundOpacity="1">
 		<Page
 			title="{i18n>pageTitle}"
 			titleAlignment="Center">
@@ -183,7 +182,8 @@
 			<Panel id="playground" headerText="{i18n>playgroundHeaderText}"
 				class="sapUiSmallMargin" width="auto"
 				expandable="true"
-				expanded="true">
+				expanded="true"
+			>
 				<VBox>
 					<Text text="{i18n>totalWidth}" />
 					<Slider
@@ -196,19 +196,19 @@
 						<Button
 							press=".onDrawCard"
 							text="{i18n>drawCard}"
-							class="sapUiResponsiveMargin" />
+							class="sapUiSmallMargin" />
 						<Button
 							press=".onDiscardCards"
 							text="{i18n>discardCards}"
-							class="sapUiResponsiveMargin" />
+							class="sapUiSmallMargin" />
 						<Button
 							press=".onSortRankwise"
 							text="{i18n>sortRankwise}"
-							class="sapUiResponsiveMargin" />
+							class="sapUiSmallMargin" />
 						<Button
 							press=".onSortSuitwise"
 							text="{i18n>sortSuitwise}"
-							class="sapUiResponsiveMargin" />
+							class="sapUiSmallMargin" />
 					</HBox>
 
 
@@ -218,16 +218,18 @@
 						items="{
 								path: 'cards>/cards'
 							}">
-						<!-- <dragDropConfig>
+						<dragDropConfig>
 							<dnd:DragInfo
-								sourceAggregation="items"
-								enabled="true" />
+								sourceAggregation="items" />
 							<dnd:DropInfo
 								targetAggregation="items"
-								enabled="true"
+								drop="onDrop" />
+							<dnd:DragDropInfo
+								sourceAggregation="items"
+								targetAggregation="items"
 								dropPosition="Between"
 								drop="onDrop" />
-						</dragDropConfig> -->
+						</dragDropConfig>
 						<items>
 							<VBox
 								height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
