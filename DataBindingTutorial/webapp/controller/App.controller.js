@@ -94,6 +94,10 @@ sap.ui.define(
         this.updateStats();
       },
 
+      onDrop(oEvent) {
+        let oDragged = oEvent.getParameter("draggedControl");
+        let oDropped = oEvent.getParameter("droppedControl");
+      },
       updateStats() {
         const aProductListItems = this.byId("ProductList").getItems();
 

@@ -74,7 +74,7 @@
 					press=".onPressHideEntries" />
 				<Button text="{i18n>showEntries}"
 					press=".onPressShowEntries" />
-				<HBox >
+				<HBox>
 					<Panel>
 						<List
 							showSeparators="None"
@@ -98,7 +98,7 @@
 							</dependents>
 						</List>
 					</Panel>
-					<VBox> 
+					<VBox>
 						<Panel id="productDetailsPanel" headerText="{i18n>panel4HeaderText}"
 							class="sapUiSmallMargin" width="auto">
 							<form:SimpleForm editable="true" layout="ColumnLayout">
@@ -180,15 +180,13 @@
 			</Panel>
 
 
-
 			<Panel id="playground" headerText="{i18n>playgroundHeaderText}"
 				class="sapUiSmallMargin" width="auto"
 				expandable="true"
 				expanded="true">
-				<VBox
-					>
-					<Text text="{i18n>totalWidth}"/>
-					<Slider 
+				<VBox>
+					<Text text="{i18n>totalWidth}" />
+					<Slider
 						value='{cards>/totalwidth}'
 						min="0"
 						max="1000"
@@ -198,19 +196,19 @@
 						<Button
 							press=".onDrawCard"
 							text="{i18n>drawCard}"
-							class="sapUiResponsiveMargin"/>
+							class="sapUiResponsiveMargin" />
 						<Button
 							press=".onDiscardCards"
 							text="{i18n>discardCards}"
-							class="sapUiResponsiveMargin"/>
+							class="sapUiResponsiveMargin" />
 						<Button
 							press=".onSortRankwise"
 							text="{i18n>sortRankwise}"
-							class="sapUiResponsiveMargin"/>
+							class="sapUiResponsiveMargin" />
 						<Button
 							press=".onSortSuitwise"
 							text="{i18n>sortSuitwise}"
-							class="sapUiResponsiveMargin"/>
+							class="sapUiResponsiveMargin" />
 					</HBox>
 
 
@@ -220,35 +218,46 @@
 						items="{
 								path: 'cards>/cards'
 							}">
-						<VBox
-							height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
-							width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
+						<!-- <dragDropConfig>
+							<dnd:DragInfo
+								sourceAggregation="items"
+								enabled="true" />
+							<dnd:DropInfo
+								targetAggregation="items"
+								enabled="true"
+								dropPosition="Between"
+								drop="onDrop" />
+						</dragDropConfig> -->
+						<items>
+							<VBox
+								height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
+								width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
 								> ${cards>/width} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1)}px">
 
-							<VBox height="0"
-								width="0">
-								<Image
-									mode="Image"
-									height="{cards>/height}px"
-									width="{cards>/width}px"
-									press=".onPressImage"
-									src="{
+								<VBox height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{
 										formatter: '.formatEnhancement',
 										parts: [
 											'cards>enhancement'
 											] 
 										}" />
-							</VBox>
-							
-							<VBox 
-								height="0"
-								width="0">
-								<Image
-									mode="Image"
-									height="{cards>/height}px"
-									width="{cards>/width}px"
-									press=".onPressImage"
-									src="{=
+								</VBox>
+
+								<VBox
+									height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{=
 										${cards>enhancement} === 'Stone' ? '' :
 										${ 
 											formatter: '.formatValue',
@@ -257,40 +266,40 @@
 												'cards>value'
 												] 
 										} }" />
-							</VBox>
-							<VBox 
-								height="0"
-								width="0">
-								<Image
-									mode="Image"
-									height="{cards>/height}px"
-									width="{cards>/width}px"
-									press=".onPressImage"
-									src="{
+								</VBox>
+								<VBox
+									height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{
 										formatter: '.formatEdition',
 										parts: [
 											'cards>edition'
 											] 
 										}" />
-							</VBox>
-							<VBox 
-								height="0"
-								width="0">
-								<Image
-									mode="Image"
-									height="{cards>/height}px"
-									width="{cards>/width}px"
-									press=".onPressImage"
-									src="{
+								</VBox>
+								<VBox
+									height="0"
+									width="0">
+									<Image
+										mode="Image"
+										height="{cards>/height}px"
+										width="{cards>/width}px"
+										press=".onPressImage"
+										src="{
 										formatter: '.formatSeal',
 										parts: [
 											'cards>seal'
 											] 
-										}" >
-										
-								</Image>
+										}">
+									</Image>
+								</VBox>
 							</VBox>
-						</VBox>
+						</items>
 					</HBox>
 				</VBox>
 			</Panel>
