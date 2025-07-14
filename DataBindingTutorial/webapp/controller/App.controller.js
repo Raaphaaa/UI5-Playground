@@ -114,6 +114,7 @@ sap.ui.define(
 
         oCards.setProperty("/cards", aCards);
       },
+
       updateStats() {
         const aProductListItems = this.byId("ProductList").getItems();
 

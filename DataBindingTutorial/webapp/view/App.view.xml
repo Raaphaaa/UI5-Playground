@@ -305,6 +305,22 @@
 							</VBox>
 						</VBox>
 					</HBox>
+					<HBox
+						width="{cards>/totalwidth}px"
+						height="{= ${cards>/height} * 2}px">
+						<VBox height="0" width="0">
+							<Image
+								width="{cards>/totalwidth}px"
+								height="{= ${cards>/height} * 2}px"
+								src="pictures/gif.gif" />
+						</VBox>
+						<VBox height="0" width="0">
+							<Image
+								width="{cards>/totalwidth}px"
+								height="{= ${cards>/height} * 2}px"
+								src="pictures/shop.gif" />
+						</VBox>
+					</HBox>
 				</VBox>
 			</Panel>
 		</Page>
