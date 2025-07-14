@@ -218,31 +218,18 @@
 						items="{
 								path: 'cards>/cards'
 							}">
-						<dragDropConfig>
-							<dnd:DragInfo
-								groupName="cards" />
-							<dnd:DropInfo
-								groupName="cards"
-								drop="onDrop" />
-							<dnd:DragDropInfo
-								dropPosition="Between"
-								drop="onDrop" />
-						</dragDropConfig>
+
 						<VBox
 							height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
 							width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
 								> ${cards>/width} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1)}px">
 
 							<dragDropConfig>
-								<dnd:DragInfo
-									enabled="false" />
 								<dnd:DropInfo
 									groupName="cards"
 									drop="onDrop" />
-								<dnd:DragDropInfo
-									dropPosition="Between"
-									drop="onDrop" />
 							</dragDropConfig>
+
 							<VBox height="0"
 								width="0">
 								<Image
@@ -313,11 +300,6 @@
 									<dragDropConfig>
 										<dnd:DragInfo
 											groupName="cards" />
-										<dnd:DropInfo
-											enabled="false" />
-										<dnd:DragDropInfo
-											dropPosition="Between"
-											drop="onDrop" />
 									</dragDropConfig>
 								</Image>
 							</VBox>

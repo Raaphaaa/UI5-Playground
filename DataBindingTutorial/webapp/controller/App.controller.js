@@ -105,10 +105,13 @@ sap.ui.define(
         let aCards = oCards.getProperty("/cards");
         let pos1 = aCards.indexOf(oDraggedCard);
         let pos2 = aCards.indexOf(oDroppedCard);
+
+        let bTopCard = oDraggedCard.topCard;
+        oDraggedCard.topCard = oDroppedCard.topCard;
+        oDroppedCard.topCard = bTopCard;
         aCards[pos1] = oDroppedCard;
-        aCards[pos1].topCard = oDraggedCard.topCard;
         aCards[pos2] = oDraggedCard;
-        aCards[pos2].topCard = oDroppedCard.topCard;
+
         oCards.setProperty("/cards", aCards);
       },
       updateStats() {
@@ -159,7 +162,7 @@ sap.ui.define(
       },
 
       formatSeal(sSeal) {
-        if (sSeal === null) {
+        if (sSeal === "") {
           return "pictures/Seals/Blank.png";
         }
         return "pictures/Seals/" + sSeal + ".png";
