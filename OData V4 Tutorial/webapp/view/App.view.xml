@@ -13,35 +13,60 @@
 							growing="true"
 							growingThreshold="10"
 							items="{
-								path: '/People'
+								path: '/People',
+								parameters: {
+									$count: true
+								}
 							}">
+							<headerToolbar>
+								<OverflowToolbar>
+									<content>
+										<ToolbarSpacer />
+										<SearchField
+											id="searchField"
+											width="20%"
+											placeholder="{i18n>searchFieldPlaceholder}"
+											search=".onSearch" />
+										<Button
+											id="refreshUsersButton"
+											icon="sap-icon://refresh"
+											tooltip="{i18n>refreshButtonText}"
+											press=".onRefresh" />
+										<Button
+											id="sortUsersButton"
+											icon="sap-icon://sort"
+											tooltip="{i18n>sortButtonText}"
+											press=".onSort" />
+									</content>
+								</OverflowToolbar>
+							</headerToolbar>
 							<columns>
 								<Column id="userNameColumn">
-									<Text text="{i18n>userNameLabelText}"/>
+									<Text text="{i18n>userNameLabelText}" />
 								</Column>
 								<Column id="firstNameColumn">
-									<Text text="{i18n>firstNameLabelText}"/>
+									<Text text="{i18n>firstNameLabelText}" />
 								</Column>
 								<Column id="lastNameColumn">
-									<Text text="{i18n>lastNameLabelText}"/>
+									<Text text="{i18n>lastNameLabelText}" />
 								</Column>
 								<Column id="ageColumn">
-									<Text text="{i18n>ageLabelText}"/>
+									<Text text="{i18n>ageLabelText}" />
 								</Column>
 							</columns>
 							<items>
 								<ColumnListItem>
 									<cells>
-										<Input value="{UserName}"/>
+										<Input value="{UserName}" />
 									</cells>
 									<cells>
-										<Input value="{FirstName}"/>
+										<Input value="{FirstName}" />
 									</cells>
 									<cells>
-										<Input value="{LastName}"/>
+										<Input value="{LastName}" />
 									</cells>
 									<cells>
-										<Input value="{Age}"/>
+										<Input value="{Age}" />
 									</cells>
 								</ColumnListItem>
 							</items>
