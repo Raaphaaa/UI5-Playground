@@ -218,7 +218,6 @@
 						items="{
 								path: 'cards>/cards'
 							}">
-
 						<VBox
 							height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
 							width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 

@@ -144,7 +144,7 @@
 													<ObjectAttribute
 														text="{UserName}" />
 												</VBox>
-												<VBox class="sapUiMediumMarginBegin">
+												<VBox class="sapUiMediumMarginBegin" width="50%">
 													<ObjectAttribute text="{i18n>ageLabelText}" />
 													<ObjectNumber number="{Age}" unit="Years" />
 												</VBox>
