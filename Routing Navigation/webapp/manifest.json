@@ -83,6 +83,11 @@
           "pattern": "employees",
           "name": "employeeList",
           "target": "employees"
+        },
+        {
+          "pattern": "employees/{employeeId}",
+          "name": "employee",
+          "target": "employee"
         }
       ],
       "targets": {
@@ -101,6 +106,11 @@
           "name": "EmployeeList",
           "level": 2,
           "path": "sap.ui.demo.nav.view.employee"
+        },
+        "employee": {
+          "id": "employee",
+          "name": "employee.Employee",
+          "level": 3
         }
       }
     }
