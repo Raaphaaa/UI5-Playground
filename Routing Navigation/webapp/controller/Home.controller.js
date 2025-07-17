@@ -9,6 +9,9 @@ sap.ui.define(
           fromTarget: "home",
         });
       },
+      onNavToEmployees: function () {
+        this.getRouter().navTo("employeeList");
+      },
     });
   }
 );
