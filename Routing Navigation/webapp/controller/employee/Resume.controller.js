@@ -35,6 +35,12 @@ sap.ui.define(
         oQuery = oArgs["?query"];
         if (oQuery && _aValidTabKeys.indexOf(oQuery.tab) > -1) {
           oView.getModel("view").setProperty("/selectedTabKey", oQuery.tab);
+
+          if (oQuery.tab === "Hobbies" || oQuery.tab === "Notes") {
+            this.getRouter()
+              .getTargets()
+              .display("resumeTab" + oQuery.tab);
+          }
         } else {
           this.getRouter().navTo(
             "employeeResume",

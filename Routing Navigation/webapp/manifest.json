@@ -122,6 +122,22 @@
           "name": "employee.Resume",
           "level": 4,
           "transition": "flip"
+        },
+        "resumeTabHobbies": {
+          "id": "resumeHobbies",
+          "name": "ResumeHobbies",
+          "parent": "employeeResume",
+          "path": "sap.ui.demo.nav.view.employee",
+          "controlId": "hobbiesTab",
+          "controlAggregation": "content"
+        },
+        "resumeTabNotes": {
+          "id": "resumeNotes",
+          "name": "ResumeNotes",
+          "parent": "employeeResume",
+          "path": "sap.ui.demo.nav.view.employee",
+          "controlId": "notesTab",
+          "controlAggregation": "content"
         }
       }
     }

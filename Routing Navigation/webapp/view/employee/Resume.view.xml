@@ -23,10 +23,8 @@
                         <mvc:XMLView viewName="sap.ui.demo.nav.view.employee.ResumeProjects"></mvc:XMLView>
                     </IconTabFilter>
                     <IconTabFilter id="hobbiesTab" text="{i18n>tabHobbies}" key="Hobbies">
-                        <Text text="{Hobbies}" />
                     </IconTabFilter>
                     <IconTabFilter id="notesTab" text="{i18n>tabNotes}" key="Notes">
-                        <Text text="{Notes}" />
                     </IconTabFilter>
                 </items>
             </IconTabBar>
