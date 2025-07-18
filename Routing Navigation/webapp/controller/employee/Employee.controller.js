@@ -19,7 +19,7 @@ sap.ui.define(
 
           oView.bindElement({
             path: "/Employees(" + oArgs.employeeId + ")",
-            eventy: {
+            events: {
               change: this._onBindingChange.bind(this),
               dataRequested: function (oEvent) {
                 oView.setBusy(true);
@@ -34,6 +34,14 @@ sap.ui.define(
           if (!this.getView().getBindingContext()) {
             this.getRouter().getTargets().display("notFound");
           }
+        },
+
+        onShowResume: function (oEvent) {
+          let oContext = this.getView().getElementBinding().getBoundContext();
+
+          this.getRouter().navTo("employeeResume", {
+            employeeId: oContext.getProperty("EmployeeID"),
+          });
         },
       }
     );

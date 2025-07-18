@@ -88,6 +88,11 @@
           "pattern": "employees/{employeeId}",
           "name": "employee",
           "target": "employee"
+        },
+        {
+          "pattern": "employees/{employeeId}/resume",
+          "name": "employeeResume",
+          "target": "employeeResume"
         }
       ],
       "targets": {
@@ -111,6 +116,12 @@
           "id": "employee",
           "name": "employee.Employee",
           "level": 3
+        },
+        "employeeResume": {
+          "id": "resume",
+          "name": "employee.Resume",
+          "level": 4,
+          "transition": "flip"
         }
       }
     }
