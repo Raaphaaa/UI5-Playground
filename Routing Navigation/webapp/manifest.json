@@ -85,6 +85,11 @@
           "target": "employees"
         },
         {
+          "pattern": "employees/overview",
+          "name": "employeeOverview",
+          "target": ["employeeOverviewTop", "employeeOverviewContent"]
+        },
+        {
           "pattern": "employees/{employeeId}",
           "name": "employee",
           "target": "employee"
@@ -137,6 +142,28 @@
           "parent": "employeeResume",
           "path": "sap.ui.demo.nav.view.employee",
           "controlId": "notesTab",
+          "controlAggregation": "content"
+        },
+        "employeeOverview": {
+          "id": "employeeOverview",
+          "path": "sap.ui.demo.nav.view.employee.overview",
+          "name": "EmployeeOverview",
+          "level": 2
+        },
+        "employeeOverviewTop": {
+          "id": "employeeOverviewTop",
+          "parent": "employeeOverview",
+          "path": "sap.ui.demo.nav.view.employee.overview",
+          "name": "EmployeeOverviewTop",
+          "controlId": "EmployeeOverviewParent",
+          "controlAggregation": "content"
+        },
+        "employeeOverviewContent": {
+          "id": "employeeOverviewContent",
+          "parent": "employeeOverview",
+          "path": "sap.ui.demo.nav.view.employee.overview",
+          "name": "EmployeeOverviewContent",
+          "controlId": "EmployeeOverviewParent",
           "controlAggregation": "content"
         }
       }

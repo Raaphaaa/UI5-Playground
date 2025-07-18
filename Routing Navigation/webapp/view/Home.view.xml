@@ -8,6 +8,8 @@
                 class="sapUiTinyMarginEnd" />
             <Button id="employeeListBtn" text="{i18n>ShowEmployeeList}" press=".onNavToEmployees"
                 class="sapUiTinyMarginEnd" />
+            <Button id="employeeOverviewBtn" text="{i18n>ShowEmployeeOverview}"
+                press=".onNavToEmployeeOverview" class="sapUiTinyMarginEnd" />
         </content>
     </Page>
 </mvc:View>
