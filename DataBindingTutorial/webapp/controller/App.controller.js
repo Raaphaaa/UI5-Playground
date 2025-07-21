@@ -39,7 +39,11 @@ sap.ui.define(
       },
 
       productListFactory(sId, oContext) {
+        // factory is called for each ListItem
+        // sId consists of <ListId>-<Index>
+        // oContext holds the current ListItem Context
         let oUIControl;
+
         if (
           oContext.getProperty("UnitsInStock") === 0 &&
           oContext.getProperty("Discontinued")
