@@ -14,7 +14,8 @@
                 class="sapUiResponsiveContentPadding"
                 binding="{Resume}"
                 select=".onTabSelect"
-                selectedKey="{view>/selectedTabKey}">
+                selectedKey="{view>/selectedTabKey}"
+            >
                 <items>
                     <IconTabFilter id="infoTab" text="{i18n>tabInfo}" key="Info">
                         <Text text="{Information}" />

@@ -21,6 +21,8 @@ sap.ui.define(
       "sap.ui.demo.nav.controller.employee.overview.EmployeeOverviewContent",
       {
         onInit: function () {
+          let oRouter = this.getRouter();
+
           this._oTable = this.byId("employeesTable");
           this._oVSD = null;
           this._sSortField = null;
@@ -29,6 +31,18 @@ sap.ui.define(
           this._sSearchQuery = null;
 
           this._initViewSettingsDialog();
+
+          oRouter
+            .getRoute("employeeOverview")
+            .attachMatched(this._onRouteMatched, this);
+        },
+
+        _onRouteMatched: function (oEvent) {
+          this._oRouterArgs = oEvent.getParameter("arguments");
+          // "||" logical OR-operator --> if first argument is false(in this case initial) the second argument is passed over
+          this._oRouterArgs["?query"] = this._oRouterArgs["?query"] || {};
+
+          this._applySearchFilter(this._oRouterArgs["?query"].search);
         },
 
         onSortButtonPressed: function () {
@@ -36,8 +50,15 @@ sap.ui.define(
         },
 
         onSearchEmployeesTable: function (oEvent) {
-          //Value of Input-Search-Field
-          this._applySearchFilter(oEvent.getSource().getValue());
+          let oRouter = this.getRouter();
+          // write the current search value to the attribute
+          // ["?query"] creates a new field ?query in the _oRouterArge structure.
+          // .serach specifies that ?query itself is a deep structure and creates the "search" field inside
+
+          // ["?query"]["search"] would have the same effect
+          //  .?query.search would not work due to the "?" which is an invalid character for direct field access
+          this._oRouterArgs["?query"].search = oEvent.getSource().getValue();
+          oRouter.navTo("employeeOverview", this._oRouterArgs, true);
         },
 
         _initViewSettingsDialog: function () {
@@ -82,6 +103,7 @@ sap.ui.define(
           this.byId("searchField").setValue(sSearchQuery);
 
           aFilters = [];
+          // if sSearchQuery exists(!= null/undefined/NaN/...) && length > 0
           if (sSearchQuery && sSearchQuery.length > 0) {
             aFilters.push(
               new Filter("FirstName", FilterOperator.Contains, sSearchQuery)

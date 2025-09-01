@@ -218,10 +218,14 @@
 						items="{
 								path: 'cards>/cards'
 							}">
+
+
+						<!-- for the top card of the deck, create a normal sized VBox
+							 for all other cards (which are stacked behind this top card)
+							 create a smaller VBox according to the avaiable space split across all cards-->
 						<VBox
-							height="{= ${cards>selected} ? ${cards>/height} * 1.2 : ${cards>/height} }px"
-							width="{= ${cards>topCard} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1) 
-								> ${cards>/width} ? ${cards>/width} : (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1)}px">
+							height="{= ${cards>/height} * (${cards>selected} ? 1.2 : 1)}px"
+							width="{= ${cards>topCard} ? ${cards>/width} : Math.min(${cards>/width}, (${cards>/totalwidth} - ${cards>/width}) / (${cards>/length} - 1))}px">
 
 							<dragDropConfig>
 								<dnd:DropInfo
