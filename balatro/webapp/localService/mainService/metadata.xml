@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd_a2x.zui_balatro.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="DeckType">
+                <Key>
+                    <PropertyRef Name="GameId"/>
+                </Key>
+                <Property Name="GameId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="DeckNr" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="StartingSize" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CurrentSize" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.zui_balatro.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_Cards" Type="Collection(com.sap.gateway.srvd_a2x.zui_balatro.v0001.CardsType)" Partner="_Deck">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="_Game" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.GameType" Nullable="false" Partner="_Deck">
+                    <ReferentialConstraint Property="GameId" ReferencedProperty="GameId"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="JokerType">
+                <Key>
+                    <PropertyRef Name="JokerId"/>
+                </Key>
+                <Property Name="JokerId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="GameId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="JokerNr" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="Description" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="Edition" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="EditionName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="EditionDescription" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="AdditiveMulti" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2"/>
+                <Property Name="MultiplicativeMulti" Type="Edm.Decimal" Nullable="false" Precision="8" Scale="2"/>
+                <Property Name="AdditiveChips" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.zui_balatro.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_Game" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.GameType" Nullable="false" Partner="_Jokers">
+                    <ReferentialConstraint Property="GameId" ReferencedProperty="GameId"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="CardsType">
+                <Key>
+                    <PropertyRef Name="CardId"/>
+                </Key>
+                <Property Name="CardId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="GameId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Color" Type="Edm.String" Nullable="false" MaxLength="7"/>
+                <Property Name="Value" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Enhancement" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="EnhancementName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="EnhancementDescription" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="Edition" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="EditionName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="EditionDescription" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="Seal" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="SealName" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="SealDescription" Type="Edm.String" Nullable="false" MaxLength="255"/>
+                <Property Name="BonusChips" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="IsHandcard" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IsSelected" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IsDiscarded" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.zui_balatro.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_Deck" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false" Partner="_Cards">
+                    <ReferentialConstraint Property="GameId" ReferencedProperty="GameId"/>
+                </NavigationProperty>
+                <NavigationProperty Name="_Game" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.GameType"/>
+            </EntityType>
+            <EntityType Name="GameType">
+                <Key>
+                    <PropertyRef Name="GameId"/>
+                </Key>
+                <Property Name="GameId" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Player" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="Ante" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Round" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CurrentBlind" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="LastBlind" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Hands" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Discards" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Chips" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Multi" Type="Edm.Decimal" Nullable="false" Precision="31" Scale="2"/>
+                <Property Name="Coins" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CurrentPokerHand" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="CurrentPokerHandLevel" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="TotalScore" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="RoundScore" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="TargetScore" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="BlindsSkipped" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="TotalHandsPlayed" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="TotalDiscardsUsed" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="TotalPlanetsUsed" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="TotalTarotsUsed" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="TotalSpectralsUsed" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="DefaultHands" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="DefaultDiscards" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="StartOfRoundHands" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="StartOfRoundDiscards" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="DefaultHandSize" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CurrentHandSize" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="DefaultJokerSlots" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CurrentJokerSlots" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="DefaultConsumableSlots" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CurrentConsumableSlots" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CardsForFlush" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="GapsForStraight" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="CreatedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LastChangedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LocalLastChangedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LocalLastChangedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd_a2x.zui_balatro.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="_Deck" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Partner="_Game">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <NavigationProperty Name="_Jokers" Type="Collection(com.sap.gateway.srvd_a2x.zui_balatro.v0001.JokerType)" Partner="_Game">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+            </EntityType>
+            <ComplexType Name="SAP__Message">
+                <Property Name="code" Type="Edm.String" Nullable="false"/>
+                <Property Name="message" Type="Edm.String" Nullable="false"/>
+                <Property Name="target" Type="Edm.String"/>
+                <Property Name="additionalTargets" Type="Collection(Edm.String)" Nullable="false"/>
+                <Property Name="transition" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="numericSeverity" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="longtextUrl" Type="Edm.String"/>
+            </ComplexType>
+            <Action Name="addNewCard" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+                <Parameter Name="color" Type="Edm.String" Nullable="false" MaxLength="7"/>
+                <Parameter Name="value" Type="Edm.Int32" Nullable="false"/>
+                <Parameter Name="enhancement" Type="Edm.Int32" Nullable="false"/>
+                <Parameter Name="edition" Type="Edm.Int32" Nullable="false"/>
+                <Parameter Name="seal" Type="Edm.Int32" Nullable="false"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+            </Action>
+            <Action Name="addCopyOfCard" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+                <Parameter Name="CardId" Type="Edm.Guid" Nullable="true"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+            </Action>
+            <Action Name="ResetDeck" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+            </Action>
+            <Action Name="removeCard" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+                <Parameter Name="CardId" Type="Edm.Guid" Nullable="true"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+            </Action>
+            <Action Name="initCards" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+            </Action>
+            <Action Name="drawCard" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+                <ReturnType Type="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType" Nullable="false"/>
+            </Action>
+            <EntityContainer Name="Container">
+                <EntitySet Name="Cards" EntityType="com.sap.gateway.srvd_a2x.zui_balatro.v0001.CardsType">
+                    <NavigationPropertyBinding Path="_Deck" Target="Deck"/>
+                    <NavigationPropertyBinding Path="_Game" Target="Game"/>
+                </EntitySet>
+                <EntitySet Name="Deck" EntityType="com.sap.gateway.srvd_a2x.zui_balatro.v0001.DeckType">
+                    <NavigationPropertyBinding Path="_Cards" Target="Cards"/>
+                    <NavigationPropertyBinding Path="_Game" Target="Game"/>
+                </EntitySet>
+                <EntitySet Name="Game" EntityType="com.sap.gateway.srvd_a2x.zui_balatro.v0001.GameType">
+                    <NavigationPropertyBinding Path="_Deck" Target="Deck"/>
+                    <NavigationPropertyBinding Path="_Jokers" Target="Joker"/>
+                </EntitySet>
+                <EntitySet Name="Joker" EntityType="com.sap.gateway.srvd_a2x.zui_balatro.v0001.JokerType">
+                    <NavigationPropertyBinding Path="_Game" Target="Game"/>
+                </EntitySet>
+            </EntityContainer>
+            <Annotations Target="SAP__self.DeckType/GameId">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DeckType/_Cards">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Deck">
+                <Annotation Term="SAP__capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Cards"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="true"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.DeckType">
+                <Annotation Term="SAP__common.Label" String="Deck"/>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType/JokerId">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType/GameId">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType">
+                <Annotation Term="SAP__common.Label" String="Active Jokers"/>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Joker">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/CardId">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/GameId">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType">
+                <Annotation Term="SAP__common.Label" String="Cards"/>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Cards">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/GameId">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/Player">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Created By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Created By User"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/CreatedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Created On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Creation Date Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/CreatedBy">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Created By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Created By User"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/LastChangedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Changed On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Change Date Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/LastChangedBy">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Changed By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Last Changed By User"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/LocalLastChangedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Label" String="Changed On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Local Instance Last Change Date Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/LocalLastChangedBy">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Changed By"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Local Instance Last Changed By User"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/_Deck">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/Game">
+                <Annotation Term="SAP__capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Deck"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="true"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Jokers"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="true"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType/_Jokers">
+                <Annotation Term="SAP__common.Composition"/>
+            </Annotations>
+            <Annotations Target="SAP__self.GameType">
+                <Annotation Term="SAP__common.Label" String="Game"/>
+                <Annotation Term="Communication.Contact">
+                    <Record/>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="SAP__aggregation.RollupType/None"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DeckType/Description">
+                <Annotation Term="SAP__common.Label" String="Deck Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.DeckType/Name">
+                <Annotation Term="SAP__common.Label" String="Deck Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType/Name">
+                <Annotation Term="SAP__common.Label" String="Deck Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType/Description">
+                <Annotation Term="SAP__common.Label" String="Deck Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType/EditionName">
+                <Annotation Term="SAP__common.Label" String="Deck Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.JokerType/EditionDescription">
+                <Annotation Term="SAP__common.Label" String="Deck Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/EnhancementName">
+                <Annotation Term="SAP__common.Label" String="Deck Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/EnhancementDescription">
+                <Annotation Term="SAP__common.Label" String="Deck Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/EditionName">
+                <Annotation Term="SAP__common.Label" String="Deck Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/EditionDescription">
+                <Annotation Term="SAP__common.Label" String="Deck Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/SealName">
+                <Annotation Term="SAP__common.Label" String="Deck Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/SealDescription">
+                <Annotation Term="SAP__common.Label" String="Deck Description"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/IsHandcard">
+                <Annotation Term="SAP__common.Label" String="Boolean Variable (X = True, - = False, Space = Unknown)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/IsSelected">
+                <Annotation Term="SAP__common.Label" String="Boolean Variable (X = True, - = False, Space = Unknown)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.CardsType/IsDiscarded">
+                <Annotation Term="SAP__common.Label" String="Boolean Variable (X = True, - = False, Space = Unknown)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.addCopyOfCard(SAP__self.DeckType)/CardId">
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.removeCard(SAP__self.DeckType)/CardId">
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
