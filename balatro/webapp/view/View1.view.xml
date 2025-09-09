@@ -1,0 +1,16 @@
+<mvc:View controllerName="balatro.balatro.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <HBox>
+            <Button press=".onDeckLeft" icon="sap-icon://arrow-left" />
+            <Image mode="Image"
+                height="80px"
+                width="40px"
+                src="{ formatter: '.formatter.formatDeck',
+                            parts: ['DeckModel>/CurrentDeck']}" />
+            <Button press=".onDeckRight" icon="sap-icon://arrow-right" />
+        </HBox>
+        <Button press=".onStartGame" text="Start" />
+    </Page>
+</mvc:View>

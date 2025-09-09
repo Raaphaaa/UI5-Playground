@@ -1,13 +1,13 @@
 /*global QUnit*/
 
 sap.ui.define([
-	"balatro/manage/balatro/controller/appHome.controller"
+	"balatro/balatro/controller/View1.controller"
 ], function (Controller) {
 	"use strict";
 
-	QUnit.module("appHome Controller");
+	QUnit.module("View1 Controller");
 
-	QUnit.test("I should test the appHome controller", function (assert) {
+	QUnit.test("I should test the View1 controller", function (assert) {
 		var oAppController = new Controller();
 		oAppController.onInit();
 		assert.ok(oAppController);

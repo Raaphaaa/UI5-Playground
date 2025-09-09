@@ -1,5 +1,5 @@
 sap.ui.define([
-	"balatro/manage/balatro/test/unit/controller/appHome.controller"
+	"balatro/balatro/test/unit/controller/View1.controller"
 ], function () {
 	"use strict";
 });

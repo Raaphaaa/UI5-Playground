@@ -1,10 +1,10 @@
 sap.ui.define([
     "sap/ui/core/UIComponent",
-    "balatro/manage/balatro/model/models"
+    "balatro/balatro/model/models"
 ], (UIComponent, models) => {
     "use strict";
 
-    return UIComponent.extend("balatro.manage.balatro.Component", {
+    return UIComponent.extend("balatro.balatro.Component", {
         metadata: {
             manifest: "json",
             interfaces: [

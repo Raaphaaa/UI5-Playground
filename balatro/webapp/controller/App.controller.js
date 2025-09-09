@@ -3,7 +3,7 @@ sap.ui.define([
 ], (BaseController) => {
   "use strict";
 
-  return BaseController.extend("balatro.manage.balatro.controller.App", {
+  return BaseController.extend("balatro.balatro.controller.App", {
       onInit() {
       }
   });

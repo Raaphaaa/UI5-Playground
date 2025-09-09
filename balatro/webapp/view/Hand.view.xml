@@ -1,0 +1,108 @@
+<mvc:View controllerName="balatro.balatro.controller.Hand"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:dnd="sap.ui.core.dnd"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+    <HBox
+        id="HBoxHandCards"
+        items="{ 
+            path: 'to_Cards',
+            sorter: [{ 
+                path: 'Color' 
+            },{ 
+                path: 'Value' 
+            } ]}"
+        alignItems="End"
+        width="{CardConfig>/totalwidth}px"
+        height="{= ${CardConfig>/height} * 1.2}px">
+        <items>
+            <VBox
+                height="{= ${CardConfig>/height} * (${IsSelected} ? 1.2 : 1)}px"
+                width="{ 
+                    formatter: '.formatter.formatWidth',
+                    parts: [
+                        'CardConfig>/width',
+                        'CardConfig>/totalwidth',
+                        '${$index}'
+                        ]
+                    }">
+                <dragDropConfig>
+                    <dnd:DropInfo
+                        groupName="cards"
+                        drop="onDrop" />
+                </dragDropConfig>
+                <VBox
+                    height="0"
+                    width="0">
+                    <Image
+                        mode="Image"
+                        height="{CardConfig>/height}px"
+                        width="{CardConfig>/width}px"
+                        press=".onSelectCard"
+                        src="{
+                            formatter: '.formatter.formatEnhancement',
+                            parts: [
+                                'Enhancement'
+                                ] 
+                            }" />
+                </VBox>
+
+                <VBox
+                    height="0"
+                    width="0">
+                    <Image
+                        mode="Image"
+                        height="{CardConfig>/height}px"
+                        width="{CardConfig>/width}px"
+                        press=".onSelectCard"
+                        src="{=
+                            ${Enhancement} === 6 ? '' :
+                            ${ 
+                                formatter: '.formatter.formatValue',
+                                parts: [
+                                    'Color',
+                                    'Value'
+                                    ] 
+                            } }" />
+                </VBox>
+                <VBox
+                    height="0"
+                    width="0">
+                    <Image
+                        mode="Image"
+                        height="{CardConfig>/height}px"
+                        width="{CardConfig>/width}px"
+                        press=".onSelectCard"
+                        src="{
+                            formatter: '.formatter.formatEdition',
+                            parts: [
+                                'Edition'
+                                ] 
+                            }" />
+                </VBox>
+                <VBox
+                    height="0"
+                    width="0">
+
+                    <Image
+                        mode="Image"
+                        height="{CardConfig>/height}px"
+                        width="{CardConfig>/width}px"
+                        press=".onSelectCard"
+                        src="{
+                            formatter: '.formatter.formatSeal',
+                            parts: [
+                                'Seal'
+                                ] 
+                        }">
+
+                        <dragDropConfig>
+                            <dnd:DragInfo
+                                groupName="cards" />
+                        </dragDropConfig>
+                    </Image>
+                </VBox>
+            </VBox>
+        </items>
+    </HBox>
+</mvc:View>

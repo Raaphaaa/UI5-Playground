@@ -1,16 +1,16 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Mon Sep 01 2025 20:02:31 GMT+0200 (Central European Summer Time)|
+|**Generation Date and Time**<br>Fri Sep 05 2025 10:32:32 GMT+0200 (Central European Summer Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
-|**App Generator Version**<br>1.18.6|
+|**App Generator Version**<br>1.18.3|
 |**Generation Platform**<br>Visual Studio Code|
-|**Template Used**<br>Basic V4|
+|**Template Used**<br>Basic V2|
 |**Service Type**<br>SAP System (ABAP On-Premise)|
-|**Service URL**<br>http://s4dev.mibs-ag.de:8010/sap/opu/odata4/sap/zui_balatro_v4/srvd_a2x/sap/zui_balatro/0001/|
+|**Service URL**<br>https://s4dev.mibs-ag.de:44301/sap/opu/odata/sap/ZUI_BALATRO_V2|
 |**Module Name**<br>balatro|
 |**Application Title**<br>Balatro x UI5|
-|**Namespace**<br>balatro.manage|
+|**Namespace**<br>balatro|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.120.27|
 |**Enable Code Assist Libraries**<br>False|
@@ -19,7 +19,7 @@
 
 ## balatro
 
-Balatro x UI5
+Balatro x UI5 (OData V2)
 
 ### Starting the generated app
 

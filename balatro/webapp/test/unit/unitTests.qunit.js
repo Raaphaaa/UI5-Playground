@@ -1,10 +1,12 @@
 /* global QUnit */
 QUnit.config.autostart = false;
 
-sap.ui.require([
-    "unit/AllTests"
-], function () {
-    "use strict";
+sap.ui.getCore().attachInit(function () {
+	"use strict";
 
-    QUnit.start();
+	sap.ui.require([
+		"balatro/balatro/test/unit/AllTests"
+	], function () {
+		QUnit.start();
+	});
 });
