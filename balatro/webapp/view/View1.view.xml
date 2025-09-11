@@ -2,15 +2,27 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-        <HBox>
-            <Button press=".onDeckLeft" icon="sap-icon://arrow-left" />
-            <Image mode="Image"
-                height="80px"
-                width="40px"
-                src="{ formatter: '.formatter.formatDeck',
-                            parts: ['DeckModel>/CurrentDeck']}" />
-            <Button press=".onDeckRight" icon="sap-icon://arrow-right" />
-        </HBox>
-        <Button press=".onStartGame" text="Start" />
+        <VBox>
+            <HBox>
+                <Button press=".onDeckLeft" icon="sap-icon://arrow-left" />
+                <Image mode="Image"
+                    height="300px"
+                    width="180px"
+                    src="{ 
+                    formatter: '.formatter.formatDeck',
+                    parts: ['DeckModel>/CurrentDeck']}" />
+                <Button press=".onDeckRight" icon="sap-icon://arrow-right" />
+            </HBox>
+            <HBox>
+                <Button press=".onNewGame" text="New Game" />
+                <Button press=".onContinueGame" text="Continue" enabled="{DeckModel>/HasOldGame}" />
+            </HBox>
+            <VBox visible="{DeckModel>/HasOldGame}">
+                <Text text="Ante: {Ante}" />
+                <Text text="Round: {Round}" />
+                <Text text="Round Score: {RoundScore}" />
+                <Text text="Deck Size: {DeckCurrentSize}" />
+            </VBox>
+        </VBox>
     </Page>
 </mvc:View>

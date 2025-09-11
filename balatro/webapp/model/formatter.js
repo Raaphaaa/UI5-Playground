@@ -21,6 +21,7 @@ sap.ui.define([], function () {
 
         formatEdition(sEdition) {
             if (sEdition == 0) {
+                // return "../pictures/Editions/foil2.gif";
                 return;
             }
             return "../pictures/Editions/" + sEdition + ".png";

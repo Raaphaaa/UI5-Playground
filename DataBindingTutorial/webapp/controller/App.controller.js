@@ -1,18 +1,11 @@
 sap.ui.define(
-    [
-        "sap/m/library",
-        "sap/ui/core/mvc/Controller",
-        "sap/ui/model/type/Currency",
-        "sap/m/ObjectAttribute",
-    ],
+    ["sap/m/library", "sap/ui/core/mvc/Controller", "sap/ui/model/type/Currency", "sap/m/ObjectAttribute"],
     (mobileLibrary, Controller, Currency, ObjectAttribute) => {
         "use strict";
 
         return Controller.extend("ui5.databinding.controller.App", {
             formatMail(sFirstName, sLastName) {
-                const oBundle = this.getView()
-                    .getModel("i18n")
-                    .getResourceBundle();
+                const oBundle = this.getView().getModel("i18n").getResourceBundle();
 
                 return mobileLibrary.URLHelper.normalizeEmail(
                     `${sFirstName}.${sLastName}@mibs-ag.de`,
@@ -23,10 +16,7 @@ sap.ui.define(
 
             formatStockValue(fUnitPrice, iStockLevel, sCurrCode) {
                 const oCurrency = new Currency();
-                return oCurrency.formatValue(
-                    [fUnitPrice * iStockLevel, sCurrCode],
-                    "string"
-                );
+                return oCurrency.formatValue([fUnitPrice * iStockLevel, sCurrCode], "string");
             },
 
             onItemSelected(oEvent) {
@@ -49,10 +39,7 @@ sap.ui.define(
                 // oContext holds the current ListItem Context
                 let oUIControl;
 
-                if (
-                    oContext.getProperty("UnitsInStock") === 0 &&
-                    oContext.getProperty("Discontinued")
-                ) {
+                if (oContext.getProperty("UnitsInStock") === 0 && oContext.getProperty("Discontinued")) {
                     oUIControl = this.byId("productSimple").clone(sId);
                 } else {
                     oUIControl = this.byId("productExtended").clone(sId);
@@ -107,12 +94,8 @@ sap.ui.define(
                 let oDragged = oEvent.getParameter("draggedControl");
                 let oDropped = oEvent.getParameter("droppedControl");
 
-                let oDraggedCard = oDragged
-                    .getBindingContext("cards")
-                    .getObject();
-                let oDroppedCard = oDropped
-                    .getBindingContext("cards")
-                    .getObject();
+                let oDraggedCard = oDragged.getBindingContext("cards").getObject();
+                let oDroppedCard = oDropped.getBindingContext("cards").getObject();
 
                 let oCards = this.getView().getModel("cards");
                 let aCards = oCards.getProperty("/cards");
@@ -139,15 +122,10 @@ sap.ui.define(
                 for (let oItem of aProductListItems) {
                     if (oItem.getVisible() === true) {
                         let oItemBinding = oItem.getBindingContext("products");
-                        totalPrice += Number(
-                            oItemBinding.getProperty("UnitPrice")
-                        );
-                        totalUnitsInStock +=
-                            oItemBinding.getProperty("UnitsInStock");
+                        totalPrice += Number(oItemBinding.getProperty("UnitPrice"));
+                        totalUnitsInStock += oItemBinding.getProperty("UnitsInStock");
                         count += 1;
-                        if (
-                            oItemBinding.getProperty("Discontinued") === false
-                        ) {
+                        if (oItemBinding.getProperty("Discontinued") === false) {
                             countDiscontinued += 1;
                         }
                     }
@@ -155,19 +133,10 @@ sap.ui.define(
 
                 const oStats = this.getView().getModel("stats");
                 oStats.setProperty("/totalPrice", totalPrice.toFixed(2));
-                oStats.setProperty(
-                    "/averagePrice",
-                    (totalPrice / count).toFixed(2)
-                );
+                oStats.setProperty("/averagePrice", (totalPrice / count).toFixed(2));
                 oStats.setProperty("/totalUnitsInStock", totalUnitsInStock);
-                oStats.setProperty(
-                    "/averageUnitsInStock",
-                    (totalUnitsInStock / count).toFixed(2)
-                );
-                oStats.setProperty(
-                    "/pricePerUnit",
-                    (totalUnitsInStock / totalPrice).toFixed(2)
-                );
+                oStats.setProperty("/averageUnitsInStock", (totalUnitsInStock / count).toFixed(2));
+                oStats.setProperty("/pricePerUnit", (totalUnitsInStock / totalPrice).toFixed(2));
                 oStats.setProperty("/discontinuedItems", countDiscontinued);
             },
             onPressImage(oEvent) {
@@ -341,9 +310,7 @@ sap.ui.define(
             getRandomInt(iMin, iMax) {
                 const minCeiled = Math.ceil(iMin);
                 const maxFloored = Math.floor(iMax);
-                return Math.floor(
-                    Math.random() * (maxFloored - minCeiled) + minCeiled
-                );
+                return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled);
             },
         });
     }

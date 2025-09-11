@@ -8,9 +8,7 @@
         items="{ 
             path: 'to_Cards',
             sorter: [{ 
-                path: 'Color' 
-            },{ 
-                path: 'Value' 
+                path: 'DisplayPos' 
             } ]}"
         alignItems="End"
         width="{CardConfig>/totalwidth}px"
@@ -104,5 +102,9 @@
                 </VBox>
             </VBox>
         </items>
+    </HBox>
+    <HBox alignItems="Center" width="100%">
+        <Button text="Sort by Color" press=".sortByColor" />
+        <Button text="Sort by Value" press=".sortByValue" />
     </HBox>
 </mvc:View>
