@@ -18,7 +18,7 @@ sap.ui.define(
                 this.getRouter().getRoute("HandCards").attachMatched(this._onRouteMatched, this);
 
                 let oConfig = new JSONModel({
-                    totalwidth: 1000,
+                    totalwidth: 500,
                     height: 150,
                     width: 100,
                 });
@@ -64,7 +64,7 @@ sap.ui.define(
 
             _filterHandCards() {
                 let oCardTable = this.getView().byId("HBoxHandCards");
-                let oFilter = new Filter("IsHandcard", FilterOperator.EQ, false);
+                let oFilter = new Filter("IsHandcard", FilterOperator.EQ, true);
                 oCardTable.getBinding("items").filter(oFilter);
             },
 
