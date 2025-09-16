@@ -36,6 +36,9 @@ sap.ui.define(
                             if (sAction === MessageBox.Action.OK) {
                                 console.log(oBinding);
 
+                                if (this.oModel.hasPendingChanges()) {
+                                    this.oModel.resetChanges();
+                                }
                                 // delete the ongoing Game before creating a new instance
                                 this.oModel.remove(oBinding.getPath(), {
                                     success: function () {

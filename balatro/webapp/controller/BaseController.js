@@ -16,6 +16,10 @@ sap.ui.define(["sap/ui/core/mvc/Controller", "sap/ui/core/routing/History"], (Co
             const oHistory = History.getInstance();
             const sPreviousHash = oHistory.getPreviousHash();
 
+            this.oModel.submitChanges();
+            // if (this.oModel.hasPendingChanges()) {
+            //     this.oModel.resetChanges();
+            // }
             if (sPreviousHash !== undefined) {
                 window.history.go(-1);
             } else {
