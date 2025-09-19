@@ -36,6 +36,7 @@ sap.ui.define(
                             if (sAction === MessageBox.Action.OK) {
                                 console.log(oBinding);
 
+                                // in case something couldn't be saved when navigating Back
                                 if (this.oModel.hasPendingChanges()) {
                                     this.oModel.resetChanges();
                                 }
