@@ -26,7 +26,7 @@
           <mxGeometry x="120" y="330" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nAWwZKMb3a22kS9MdofH-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="420" y="140" width="530" height="220" as="geometry" />
+          <mxGeometry x="520" y="140" width="430" height="220" as="geometry" />
         </mxCell>
         <mxCell id="nAWwZKMb3a22kS9MdofH-9" value="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="536.5" y="160" width="80" height="30" as="geometry" />
@@ -62,7 +62,7 @@
           <mxGeometry x="853.5" y="210" width="80" height="30" as="geometry" />
         </mxCell>
         <mxCell id="nAWwZKMb3a22kS9MdofH-24" value="Wert" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
-          <mxGeometry x="530" y="240" width="86.5" height="20" as="geometry" />
+          <mxGeometry x="540" y="240" width="76.5" height="20" as="geometry" />
         </mxCell>
         <mxCell id="nAWwZKMb3a22kS9MdofH-25" value="Wert" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="616.5" y="240" width="80" height="20" as="geometry" />
@@ -112,17 +112,8 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="tQHxq5KzASbdz7qVQXqO-7" value="Testfall-ID, Tabalias mitgeben" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="tQHxq5KzASbdz7qVQXqO-7" value="Testfall-ID, Tabalias und Protokoll-ID mitgeben" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="230" y="140" width="120" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="tQHxq5KzASbdz7qVQXqO-8" value="Protokol-ID" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="456.5" y="160" width="80" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tQHxq5KzASbdz7qVQXqO-9" value="(...)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="456.5" y="210" width="80" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="tQHxq5KzASbdz7qVQXqO-10" value="(...)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="470" y="240" width="66.5" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
