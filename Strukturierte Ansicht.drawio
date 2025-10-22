@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.7">
   <diagram name="Seite-1" id="lBMEEyc_BJLMuaJKhjvF">
-    <mxGraphModel dx="570" dy="300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="731" dy="384" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -13,7 +13,7 @@
         <mxCell id="nAWwZKMb3a22kS9MdofH-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nAWwZKMb3a22kS9MdofH-2" target="nAWwZKMb3a22kS9MdofH-4" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="nAWwZKMb3a22kS9MdofH-2" value="Intent-Based Navigation mit Testfall-ID und Tabalias" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="nAWwZKMb3a22kS9MdofH-2" value="Intent-Based Navigation" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="120" y="130" width="110" height="60" as="geometry" />
         </mxCell>
         <mxCell id="nAWwZKMb3a22kS9MdofH-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="nAWwZKMb3a22kS9MdofH-4" target="nAWwZKMb3a22kS9MdofH-6" edge="1">
@@ -100,7 +100,7 @@
         <mxCell id="tQHxq5KzASbdz7qVQXqO-3" value="Testbereiche" style="rounded=0;whiteSpace=wrap;html=1;labelPosition=center;verticalLabelPosition=middle;align=center;verticalAlign=middle;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="680" y="480" width="136.5" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="tQHxq5KzASbdz7qVQXqO-4" value="Versionen / Testläufe" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+        <mxCell id="tQHxq5KzASbdz7qVQXqO-4" value="Versionsabhängig (Testläufe)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
           <mxGeometry x="680" y="630" width="350" height="40" as="geometry" />
         </mxCell>
         <mxCell id="tQHxq5KzASbdz7qVQXqO-6" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
@@ -111,6 +111,9 @@
               <mxPoint x="860" y="590" />
             </Array>
           </mxGeometry>
+        </mxCell>
+        <mxCell id="tQHxq5KzASbdz7qVQXqO-7" value="Testfall-ID, Tabalias und Version mitgeben" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="140" width="120" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
