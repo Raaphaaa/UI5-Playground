@@ -85,11 +85,11 @@
         <mxCell id="nAWwZKMb3a22kS9MdofH-31" value="Erwartet" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
           <mxGeometry x="980" y="240" width="60" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Tf0pKiQDm-MoqfeCtS7O-1" value="T --&amp;gt; E" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="544.5" y="110" width="77.5" height="20" as="geometry" />
+        <mxCell id="Tf0pKiQDm-MoqfeCtS7O-1" value="Erwartung anpassen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="544.5" y="110" width="115.5" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="Tf0pKiQDm-MoqfeCtS7O-2" value="E --&amp;gt; T" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="660" y="110" width="77.5" height="20" as="geometry" />
+        <mxCell id="Tf0pKiQDm-MoqfeCtS7O-2" value="Ergebnis anpassen" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="670" y="110" width="120" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
