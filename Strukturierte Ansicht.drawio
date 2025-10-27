@@ -884,8 +884,8 @@
         <mxCell id="ZXHjuXCidmDaZgO9Dhqy-38" value="PK" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="380" y="2090" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-39" value="Unterscheidungs- Kriterium" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="820" y="2350" width="120" height="60" as="geometry" />
+        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-39" value="Unterscheidungs- Kriterium" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="877.5" y="2350" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
