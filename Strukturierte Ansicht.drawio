@@ -858,10 +858,10 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-30" value="Ursprungs-App anpassen: Navigation zu dieser App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-30" value="ALP-App anpassen: Navigation zu dieser App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1540" y="1570" width="130" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-31" value="Zurück-Navigation zu der Ursprungs-App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-31" value="Zurück-Navigation zur ALP" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="1540" y="1620" width="130" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ZXHjuXCidmDaZgO9Dhqy-33" value="Auslesen Startup-Parameter" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
