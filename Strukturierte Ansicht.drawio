@@ -806,7 +806,7 @@
         <mxCell id="ZXHjuXCidmDaZgO9Dhqy-4" value="Testdaten beschaffen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
           <mxGeometry x="793" y="1510" width="129" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-5" value="RAP-BO für die Daten und ggf. Änderungstabellen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-5" value="RAP-BO für die Daten und Änderungstabellen" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="940" y="1510" width="129" height="50" as="geometry" />
         </mxCell>
         <mxCell id="ZXHjuXCidmDaZgO9Dhqy-6" value="Implementierung" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
