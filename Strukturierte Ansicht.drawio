@@ -562,18 +562,6 @@
         <mxCell id="dm4QpjcQpoRG3GsXEh8C-113" value="Erwartete Werte erstmal nicht berücksichtigt" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="889.75" y="904" width="122.5" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="mFx7xUsWl2LTZf2Ddcmi-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mFx7xUsWl2LTZf2Ddcmi-2" target="mFx7xUsWl2LTZf2Ddcmi-4" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="mFx7xUsWl2LTZf2Ddcmi-2" value="Tabellenalias" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="650" y="710" width="110" height="40" as="geometry" />
-        </mxCell>
-        <mxCell id="mFx7xUsWl2LTZf2Ddcmi-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="mFx7xUsWl2LTZf2Ddcmi-4" target="mFx7xUsWl2LTZf2Ddcmi-5" edge="1">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="mFx7xUsWl2LTZf2Ddcmi-4" value="SAP Gateway - Structdescriber?" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="650" y="790" width="110" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="mFx7xUsWl2LTZf2Ddcmi-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;curved=0;" parent="1" source="mFx7xUsWl2LTZf2Ddcmi-5" target="dm4QpjcQpoRG3GsXEh8C-93" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
@@ -588,14 +576,8 @@
         <mxCell id="mFx7xUsWl2LTZf2Ddcmi-5" value="&quot;Feldkatalog&quot;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
           <mxGeometry x="650" y="880" width="110" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="mFx7xUsWl2LTZf2Ddcmi-7" value="&lt;font style=&quot;font-size: 32px; color: rgb(255, 0, 0);&quot;&gt;&lt;b&gt;?&lt;/b&gt;&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="763.25" y="805" width="16.75" height="30" as="geometry" />
-        </mxCell>
         <mxCell id="mFx7xUsWl2LTZf2Ddcmi-9" value="Mapping auf neues JSON Model" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="645" y="1010" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="97M6dL-WZuVcWbfmvEKw-1" value="Custom CDS Entities für Tabellenfelder bzw. BO für Daten" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="781" y="805" width="189" height="30" as="geometry" />
         </mxCell>
         <mxCell id="74BLLHRXN8UdU5Bro8fT-1" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;fontSize=16;" parent="1" vertex="1">
           <mxGeometry x="80" y="2170" width="2156" height="156" as="geometry" />
