@@ -827,6 +827,20 @@
         <mxCell id="ZXHjuXCidmDaZgO9Dhqy-12" value="Testen MCP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
           <mxGeometry x="1241" y="1510" width="130" height="50" as="geometry" />
         </mxCell>
+        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-16" value="Konzept" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;" edge="1" parent="1">
+          <mxGeometry y="20" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="1490" as="sourcePoint" />
+            <mxPoint x="920" y="1490" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ZXHjuXCidmDaZgO9Dhqy-19" value="Entwicklung" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" edge="1" parent="1">
+          <mxGeometry y="20" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="940" y="1490" as="sourcePoint" />
+            <mxPoint x="1370" y="1490" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
