@@ -1,0 +1,706 @@
+[
+    {
+        "LINE_EXPECTED": 1,
+        "LINE_ACTUAL": 1,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1001",
+        "VALUE_ACTUAL": "1001"
+    },
+    {
+        "LINE_EXPECTED": 1,
+        "LINE_ACTUAL": 1,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Müller",
+        "VALUE_ACTUAL": "Müller",
+        "FIELD_DESCR": "Name"
+    },
+    {
+        "LINE_EXPECTED": 1,
+        "LINE_ACTUAL": 1,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Berlin",
+        "VALUE_ACTUAL": "Berlin",
+        "FIELD_DESCR": "Stadt"
+    },
+    {
+        "LINE_EXPECTED": 1,
+        "LINE_ACTUAL": 1,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE",
+        "FIELD_DESCR": "Land"
+    },
+    {
+        "LINE_EXPECTED": 1,
+        "LINE_ACTUAL": 1,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active",
+        "FIELD_DESCR": "Status"
+    },
+    {
+        "LINE_EXPECTED": 2,
+        "LINE_ACTUAL": 2,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1002",
+        "VALUE_ACTUAL": "1002"
+    },
+    {
+        "LINE_EXPECTED": 2,
+        "LINE_ACTUAL": 2,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Schmidt",
+        "VALUE_ACTUAL": "Schmid"
+    },
+    {
+        "LINE_EXPECTED": 2,
+        "LINE_ACTUAL": 2,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Hamburg",
+        "VALUE_ACTUAL": "Hamburg"
+    },
+    {
+        "LINE_EXPECTED": 2,
+        "LINE_ACTUAL": 2,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 2,
+        "LINE_ACTUAL": 2,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 3,
+        "LINE_ACTUAL": 3,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1003",
+        "VALUE_ACTUAL": "1003"
+    },
+    {
+        "LINE_EXPECTED": 3,
+        "LINE_ACTUAL": 3,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Weber",
+        "VALUE_ACTUAL": "Weber"
+    },
+    {
+        "LINE_EXPECTED": 3,
+        "LINE_ACTUAL": 3,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "München",
+        "VALUE_ACTUAL": "München"
+    },
+    {
+        "LINE_EXPECTED": 3,
+        "LINE_ACTUAL": 3,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 3,
+        "LINE_ACTUAL": 3,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 4,
+        "LINE_ACTUAL": 4,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1004",
+        "VALUE_ACTUAL": "1004"
+    },
+    {
+        "LINE_EXPECTED": 4,
+        "LINE_ACTUAL": 4,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Becker",
+        "VALUE_ACTUAL": "Becke"
+    },
+    {
+        "LINE_EXPECTED": 4,
+        "LINE_ACTUAL": 4,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Köln",
+        "VALUE_ACTUAL": "Koln"
+    },
+    {
+        "LINE_EXPECTED": 4,
+        "LINE_ACTUAL": 4,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 4,
+        "LINE_ACTUAL": 4,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 5,
+        "LINE_ACTUAL": 5,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1005",
+        "VALUE_ACTUAL": "1005"
+    },
+    {
+        "LINE_EXPECTED": 5,
+        "LINE_ACTUAL": 5,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Fischer",
+        "VALUE_ACTUAL": "Fischer"
+    },
+    {
+        "LINE_EXPECTED": 5,
+        "LINE_ACTUAL": 5,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Stuttgart",
+        "VALUE_ACTUAL": "Stuttgart"
+    },
+    {
+        "LINE_EXPECTED": 5,
+        "LINE_ACTUAL": 5,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 5,
+        "LINE_ACTUAL": 5,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 6,
+        "LINE_ACTUAL": 6,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1006",
+        "VALUE_ACTUAL": "1006"
+    },
+    {
+        "LINE_EXPECTED": 6,
+        "LINE_ACTUAL": 6,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Hoffmann",
+        "VALUE_ACTUAL": "Hoffman"
+    },
+    {
+        "LINE_EXPECTED": 6,
+        "LINE_ACTUAL": 6,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Bremen",
+        "VALUE_ACTUAL": "Bremen"
+    },
+    {
+        "LINE_EXPECTED": 6,
+        "LINE_ACTUAL": 6,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 6,
+        "LINE_ACTUAL": 6,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 7,
+        "LINE_ACTUAL": 7,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1007",
+        "VALUE_ACTUAL": "1007"
+    },
+    {
+        "LINE_EXPECTED": 7,
+        "LINE_ACTUAL": 7,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Wagner",
+        "VALUE_ACTUAL": "Wagner"
+    },
+    {
+        "LINE_EXPECTED": 7,
+        "LINE_ACTUAL": 7,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Dortmund",
+        "VALUE_ACTUAL": "Dortmund"
+    },
+    {
+        "LINE_EXPECTED": 7,
+        "LINE_ACTUAL": 7,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 7,
+        "LINE_ACTUAL": 7,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 8,
+        "LINE_ACTUAL": 8,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1008",
+        "VALUE_ACTUAL": "1008"
+    },
+    {
+        "LINE_EXPECTED": 8,
+        "LINE_ACTUAL": 8,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Schäfer",
+        "VALUE_ACTUAL": "Schäfer"
+    },
+    {
+        "LINE_EXPECTED": 8,
+        "LINE_ACTUAL": 8,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Leipzig",
+        "VALUE_ACTUAL": "Leipzig"
+    },
+    {
+        "LINE_EXPECTED": 8,
+        "LINE_ACTUAL": 8,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 8,
+        "LINE_ACTUAL": 8,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Inactive"
+    },
+    {
+        "LINE_EXPECTED": 9,
+        "LINE_ACTUAL": 9,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1009",
+        "VALUE_ACTUAL": "1009"
+    },
+    {
+        "LINE_EXPECTED": 9,
+        "LINE_ACTUAL": 9,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Koch",
+        "VALUE_ACTUAL": "Koc"
+    },
+    {
+        "LINE_EXPECTED": 9,
+        "LINE_ACTUAL": 9,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Hannover",
+        "VALUE_ACTUAL": "Hannover"
+    },
+    {
+        "LINE_EXPECTED": 9,
+        "LINE_ACTUAL": 9,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 9,
+        "LINE_ACTUAL": 9,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Inactive"
+    },
+    {
+        "LINE_EXPECTED": 10,
+        "LINE_ACTUAL": 10,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1010",
+        "VALUE_ACTUAL": "1010"
+    },
+    {
+        "LINE_EXPECTED": 10,
+        "LINE_ACTUAL": 10,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Richter",
+        "VALUE_ACTUAL": "Richte"
+    },
+    {
+        "LINE_EXPECTED": 10,
+        "LINE_ACTUAL": 10,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Essen",
+        "VALUE_ACTUAL": "Essen"
+    },
+    {
+        "LINE_EXPECTED": 10,
+        "LINE_ACTUAL": 10,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 10,
+        "LINE_ACTUAL": 10,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 11,
+        "LINE_ACTUAL": 11,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1011",
+        "VALUE_ACTUAL": "1011"
+    },
+    {
+        "LINE_EXPECTED": 11,
+        "LINE_ACTUAL": 11,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Klein",
+        "VALUE_ACTUAL": "Klein"
+    },
+    {
+        "LINE_EXPECTED": 11,
+        "LINE_ACTUAL": 11,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Dresden",
+        "VALUE_ACTUAL": "Dresden"
+    },
+    {
+        "LINE_EXPECTED": 11,
+        "LINE_ACTUAL": 11,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 11,
+        "LINE_ACTUAL": 11,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 12,
+        "LINE_ACTUAL": 12,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1012",
+        "VALUE_ACTUAL": "1012"
+    },
+    {
+        "LINE_EXPECTED": 12,
+        "LINE_ACTUAL": 12,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Wolf",
+        "VALUE_ACTUAL": "Wolf"
+    },
+    {
+        "LINE_EXPECTED": 12,
+        "LINE_ACTUAL": 12,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Nürnberg",
+        "VALUE_ACTUAL": "Nürnberg"
+    },
+    {
+        "LINE_EXPECTED": 12,
+        "LINE_ACTUAL": 12,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 12,
+        "LINE_ACTUAL": 12,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Inactive"
+    },
+    {
+        "LINE_EXPECTED": 13,
+        "LINE_ACTUAL": 13,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1013",
+        "VALUE_ACTUAL": "1013"
+    },
+    {
+        "LINE_EXPECTED": 13,
+        "LINE_ACTUAL": 13,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Schröder",
+        "VALUE_ACTUAL": "Schröder"
+    },
+    {
+        "LINE_EXPECTED": 13,
+        "LINE_ACTUAL": 13,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Duisburg",
+        "VALUE_ACTUAL": "Duisburg"
+    },
+    {
+        "LINE_EXPECTED": 13,
+        "LINE_ACTUAL": 13,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 13,
+        "LINE_ACTUAL": 13,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 14,
+        "LINE_ACTUAL": 14,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1014",
+        "VALUE_ACTUAL": "1014"
+    },
+    {
+        "LINE_EXPECTED": 14,
+        "LINE_ACTUAL": 14,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Neumann",
+        "VALUE_ACTUAL": "Neuman"
+    },
+    {
+        "LINE_EXPECTED": 14,
+        "LINE_ACTUAL": 14,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Bochum",
+        "VALUE_ACTUAL": "Bochum"
+    },
+    {
+        "LINE_EXPECTED": 14,
+        "LINE_ACTUAL": 14,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 14,
+        "LINE_ACTUAL": 14,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 15,
+        "LINE_ACTUAL": 15,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1015",
+        "VALUE_ACTUAL": "1015"
+    },
+    {
+        "LINE_EXPECTED": 15,
+        "LINE_ACTUAL": 15,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Braun",
+        "VALUE_ACTUAL": "Braun"
+    },
+    {
+        "LINE_EXPECTED": 15,
+        "LINE_ACTUAL": 15,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Wuppertal",
+        "VALUE_ACTUAL": "Wuppertal"
+    },
+    {
+        "LINE_EXPECTED": 15,
+        "LINE_ACTUAL": 15,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 15,
+        "LINE_ACTUAL": 15,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 16,
+        "LINE_ACTUAL": 16,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1016",
+        "VALUE_ACTUAL": "1016"
+    },
+    {
+        "LINE_EXPECTED": 16,
+        "LINE_ACTUAL": 16,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Krüger",
+        "VALUE_ACTUAL": "Krüger"
+    },
+    {
+        "LINE_EXPECTED": 16,
+        "LINE_ACTUAL": 16,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Bielefeld",
+        "VALUE_ACTUAL": "Bielefeld"
+    },
+    {
+        "LINE_EXPECTED": 16,
+        "LINE_ACTUAL": 16,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 16,
+        "LINE_ACTUAL": 16,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Inactive"
+    },
+    {
+        "LINE_EXPECTED": 17,
+        "LINE_ACTUAL": 17,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1017",
+        "VALUE_ACTUAL": "1017"
+    },
+    {
+        "LINE_EXPECTED": 17,
+        "LINE_ACTUAL": 17,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Werner",
+        "VALUE_ACTUAL": "Werner"
+    },
+    {
+        "LINE_EXPECTED": 17,
+        "LINE_ACTUAL": 17,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Bonn",
+        "VALUE_ACTUAL": "Bonn"
+    },
+    {
+        "LINE_EXPECTED": 17,
+        "LINE_ACTUAL": 17,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 17,
+        "LINE_ACTUAL": 17,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 18,
+        "LINE_ACTUAL": 18,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1018",
+        "VALUE_ACTUAL": "1018"
+    },
+    {
+        "LINE_EXPECTED": 18,
+        "LINE_ACTUAL": 18,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Lange",
+        "VALUE_ACTUAL": "Lang"
+    },
+    {
+        "LINE_EXPECTED": 18,
+        "LINE_ACTUAL": 18,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Münster",
+        "VALUE_ACTUAL": "Munster"
+    },
+    {
+        "LINE_EXPECTED": 18,
+        "LINE_ACTUAL": 18,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 18,
+        "LINE_ACTUAL": 18,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Active"
+    },
+    {
+        "LINE_EXPECTED": 19,
+        "LINE_ACTUAL": 19,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1019",
+        "VALUE_ACTUAL": "1019"
+    },
+    {
+        "LINE_EXPECTED": 19,
+        "LINE_ACTUAL": 19,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Meier",
+        "VALUE_ACTUAL": "Meie"
+    },
+    {
+        "LINE_EXPECTED": 19,
+        "LINE_ACTUAL": 19,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Karlsruhe",
+        "VALUE_ACTUAL": "Karlsruhe"
+    },
+    {
+        "LINE_EXPECTED": 19,
+        "LINE_ACTUAL": 19,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "FR"
+    },
+    {
+        "LINE_EXPECTED": 19,
+        "LINE_ACTUAL": 19,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Active",
+        "VALUE_ACTUAL": "Inactive"
+    },
+    {
+        "LINE_EXPECTED": 20,
+        "LINE_ACTUAL": 20,
+        "FIELDNAME": "ID",
+        "VALUE_EXPECTED": "1020",
+        "VALUE_ACTUAL": "1020"
+    },
+    {
+        "LINE_EXPECTED": 20,
+        "LINE_ACTUAL": 20,
+        "FIELDNAME": "NAME",
+        "VALUE_EXPECTED": "Schwarz",
+        "VALUE_ACTUAL": "Schwarz"
+    },
+    {
+        "LINE_EXPECTED": 20,
+        "LINE_ACTUAL": 20,
+        "FIELDNAME": "CITY",
+        "VALUE_EXPECTED": "Aachen",
+        "VALUE_ACTUAL": "Aachen"
+    },
+    {
+        "LINE_EXPECTED": 20,
+        "LINE_ACTUAL": 20,
+        "FIELDNAME": "COUNTRY",
+        "VALUE_EXPECTED": "DE",
+        "VALUE_ACTUAL": "DE"
+    },
+    {
+        "LINE_EXPECTED": 20,
+        "LINE_ACTUAL": 20,
+        "FIELDNAME": "STATUS",
+        "VALUE_EXPECTED": "Inactive",
+        "VALUE_ACTUAL": "Inactive"
+    }
+]

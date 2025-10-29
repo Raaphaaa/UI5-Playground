@@ -2,26 +2,56 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:dnd="sap.ui.core.dnd"
     xmlns:core="sap.ui.core"
+    xmlns:table="sap.ui.table"
     xmlns="sap.m">
+    <table:TreeTable id="TreeTable" rows="{path: 'mappedData>/mappedData'}">
+        <!-- <table:columns>
+            <table:Column>
+                <Text text="Color" />
+                <table:template>
+                    <Text text="{NeuesKartenModel>Color}" />
+                </table:template>
+            </table:Column>
+            <table:Column>
+                <Text text="Value" />
+                <table:template>
+                    <Text text="{NeuesKartenModel>Value}" />
+                </table:template>
+            </table:Column>
+        </table:columns> -->
+        <!-- <items>
+            <ColumnListItem>
+                <cells>
+                    <Text text="{NeuesKartenModel>Color}" />
+                </cells>
+                <cells>
+                    <Text text="{NeuesKartenModel>Value}" />
+                </cells>
+            </ColumnListItem>
+        </items> -->
+    </table:TreeTable>
+    <!-- ,
+    filters: [{
+    path: 'IsHandCard',
+    operator: 'EQ',
+    value1: true
+    }]}" -->
     <HBox
         id="HBoxHandCards"
         items="{ 
-            path: 'to_Cards',
-            sorter: [{ 
-                path: 'DisplayPos' 
-            } ]}"
+            path: 'cards>/cards'}"
         alignItems="End"
-        width="{CardConfig>/totalwidth}px"
-        height="{= ${CardConfig>/height} * 1.2}px">
+        width="{Settings>/totalwidth}px"
+        height="{= ${Settings>/height} * 1.2}px">
         <items>
             <VBox
-                height="{= ${CardConfig>/height} * (${IsSelected} ? 1.2 : 1)}px"
+                height="{= ${Settings>/height} * (${cards>IsSelected} ? 1.2 : 1)}px"
                 width="{ 
                     formatter: '.formatter.formatWidth',
                     parts: [
-                        'CardConfig>/width',
-                        'CardConfig>/totalwidth',
-                        '${$index}'
+                        'Settings>/width',
+                        'Settings>/totalwidth',
+      '${$index}'
                         ]
                     }">
                 <dragDropConfig>
@@ -34,13 +64,13 @@
                     width="0">
                     <Image
                         mode="Image"
-                        height="{CardConfig>/height}px"
-                        width="{CardConfig>/width}px"
+                        height="{Settings>/height}px"
+                        width="{Settings>/width}px"
                         press=".onSelectCard"
                         src="{
                             formatter: '.formatter.formatEnhancement',
                             parts: [
-                                'Enhancement'
+                                'cards>Enhancement'
                                 ] 
                             }" />
                 </VBox>
@@ -50,16 +80,16 @@
                     width="0">
                     <Image
                         mode="Image"
-                        height="{CardConfig>/height}px"
-                        width="{CardConfig>/width}px"
+                        height="{Settings>/height}px"
+                        width="{Settings>/width}px"
                         press=".onSelectCard"
                         src="{=
-                            ${Enhancement} === 6 ? '' :
+                            ${cards>Enhancement} === 6 ? '' :
                             ${ 
                                 formatter: '.formatter.formatValue',
                                 parts: [
-                                    'Color',
-                                    'Value'
+                                    'cards>Color',
+                                    'cards>Value'
                                     ] 
                             } }" />
                 </VBox>
@@ -68,13 +98,13 @@
                     width="0">
                     <Image
                         mode="Image"
-                        height="{CardConfig>/height}px"
-                        width="{CardConfig>/width}px"
+                        height="{Settings>/height}px"
+                        width="{Settings>/width}px"
                         press=".onSelectCard"
                         src="{
                             formatter: '.formatter.formatEdition',
                             parts: [
-                                'Edition'
+                                'cards>Edition'
                                 ] 
                             }" />
                 </VBox>
@@ -84,13 +114,13 @@
 
                     <Image
                         mode="Image"
-                        height="{CardConfig>/height}px"
-                        width="{CardConfig>/width}px"
+                        height="{Settings>/height}px"
+                        width="{Settings>/width}px"
                         press=".onSelectCard"
                         src="{
                             formatter: '.formatter.formatSeal',
                             parts: [
-                                'Seal'
+                                'cards>Seal'
                                 ] 
                         }">
 
@@ -106,5 +136,6 @@
     <HBox alignItems="Center" width="100%">
         <Button text="Sort by Color" press=".sortByColor" />
         <Button text="Sort by Value" press=".sortByValue" />
+        <Button text="Draw Card" press=".onDrawCard" />
     </HBox>
 </mvc:View>

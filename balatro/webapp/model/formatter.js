@@ -28,12 +28,12 @@ sap.ui.define([], function () {
         },
 
         formatWidth(iWidth, iTotalwidth, iIndex) {
-            let oCards = this.getView().byId("HBoxHandCards").getBinding("items");
-            if (iIndex + 1 === oCards.iLength) {
+            const iLength = this.getView().byId("HBoxHandCards").getBinding("items").getLength();
+            if (iIndex + 1 === iLength) {
                 return iWidth + "px";
             } else {
                 let iAvailableWidth = iTotalwidth - iWidth;
-                iAvailableWidth /= oCards.iLength - 1;
+                iAvailableWidth /= iLength - 1;
 
                 return Math.min(iWidth, iAvailableWidth) + "px";
             }

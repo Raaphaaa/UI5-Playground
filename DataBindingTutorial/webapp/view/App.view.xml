@@ -66,6 +66,8 @@
 					</l:VerticalLayout>
 				</HBox>
 			</Panel>
+
+
 			<Panel headerText="{i18n>panel3HeaderText}" class="sapUiSmallMargin"
 				width="auto"
 				expandable="true">

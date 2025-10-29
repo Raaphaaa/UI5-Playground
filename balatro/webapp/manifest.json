@@ -63,6 +63,18 @@
                     "bundleName": "balatro.balatro.i18n.i18n"
                 }
             },
+            "cards": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/cards.json"
+            },
+            "Settings": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/settings.json"
+            },
+            "data": {
+                "type": "sap.ui.model.json.JSONModel",
+                "uri": "./model/data.json"
+            },
             "": {
                 "dataSource": "mainService",
                 "preload": true,
