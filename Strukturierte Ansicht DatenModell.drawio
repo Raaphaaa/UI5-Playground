@@ -7,7 +7,7 @@
         <mxCell id="TMRvNmBy3gaYvKD6rry--298" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="60" y="1090" width="1520" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--1" value="/SMRT/PROTVALUES (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#d79b00;fontSize=16;fillColor=#ffe6cc;" vertex="1" parent="1">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--1" value="/SMRT/PROTVALUES (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#82b366;fontSize=16;fillColor=#d5e8d4;" vertex="1" parent="1">
           <mxGeometry x="90" y="80" width="400" height="905" as="geometry" />
         </mxCell>
         <mxCell id="TMRvNmBy3gaYvKD6rry--2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="TMRvNmBy3gaYvKD6rry--1">
@@ -218,7 +218,7 @@
             <mxRectangle width="200" height="55" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--54" value="/SMRT/PROTLINES (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#b85450;fontSize=16;fillColor=#f8cecc;" vertex="1" parent="1">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--54" value="/SMRT/PROTLINES (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#d6b656;fontSize=16;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="-560" y="80" width="400" height="468" as="geometry" />
         </mxCell>
         <mxCell id="TMRvNmBy3gaYvKD6rry--55" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="TMRvNmBy3gaYvKD6rry--54">
@@ -343,7 +343,7 @@
         <mxCell id="TMRvNmBy3gaYvKD6rry--112" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=openThin;endFill=0;curved=0;strokeWidth=3;" edge="1" parent="1" source="TMRvNmBy3gaYvKD6rry--23" target="TMRvNmBy3gaYvKD6rry--73">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--159" value="/SMRT/PROTTABS (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#6c8ebf;fontSize=16;fillColor=#dae8fc;" vertex="1" parent="1">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--159" value="/SMRT/PROTTABS (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#d6b656;fontSize=16;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="-1190" y="80" width="400" height="304" as="geometry" />
         </mxCell>
         <mxCell id="TMRvNmBy3gaYvKD6rry--160" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="TMRvNmBy3gaYvKD6rry--159">
@@ -594,7 +594,7 @@
         <mxCell id="TMRvNmBy3gaYvKD6rry--299" value="&lt;b&gt;&lt;font style=&quot;font-size: 36px;&quot;&gt;UI5 - Datenmodell&lt;/font&gt;&lt;/b&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="590" y="1090" width="380" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--300" value="/SMRT/TCASEVERS (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#b85450;fontSize=16;fillColor=#f8cecc;" vertex="1" parent="1">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--300" value="/SMRT/TCASEVERS (vereinfacht)" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#d6b656;fontSize=16;fillColor=#fff2cc;" vertex="1" parent="1">
           <mxGeometry x="670" y="135" width="400" height="300" as="geometry" />
         </mxCell>
         <mxCell id="TMRvNmBy3gaYvKD6rry--301" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" vertex="1" parent="TMRvNmBy3gaYvKD6rry--300">
