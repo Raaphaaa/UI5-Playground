@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
   <diagram name="Seite-1" id="3jQrXUbkpkXriSrU0XMB">
-    <mxGraphModel dx="863" dy="459" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="908" dy="466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -8,37 +8,40 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-2" value="Fiori Launchpad" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="50" width="120" height="60" as="geometry" />
+          <mxGeometry x="319" y="50" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ru2G3VzyaBEJT_psao-n-3" target="ru2G3VzyaBEJT_psao-n-4">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-3" value="SMART-Analyse" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="150" width="120" height="60" as="geometry" />
+          <mxGeometry x="319" y="150" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=classic;startFill=1;" edge="1" parent="1" source="ru2G3VzyaBEJT_psao-n-4" target="ru2G3VzyaBEJT_psao-n-5">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-4" value="Analytical List Page" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="260" width="120" height="60" as="geometry" />
+          <mxGeometry x="319" y="260" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-5" value="Strukturierte Ansicht" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="230" y="370" width="120" height="60" as="geometry" />
+          <mxGeometry x="319" y="370" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-6" value="Analyse-App für durchgeführte Testläufe" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="400" y="150" width="250" height="60" as="geometry" />
+          <mxGeometry x="489" y="150" width="250" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="ru2G3VzyaBEJT_psao-n-9" value="Anzeige Datensätze des Testfalls&lt;div&gt;Vergleich Ergebnis / Erwartetes Ergebnis&lt;/div&gt;&lt;div&gt;Anpassung&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ergebnis / Erwartetes Ergebnis&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="400" y="370" width="250" height="60" as="geometry" />
+        <mxCell id="ru2G3VzyaBEJT_psao-n-9" value="Anzeige der Datensätze&lt;div&gt;Vergleich Ergebnis / Erwartung&lt;/div&gt;&lt;div&gt;Anpassung&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ergebnis / Erwartung&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="489" y="370" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-10" value="Übersicht Testfälle&lt;div&gt;Fehlerkategorien&lt;/div&gt;&lt;div&gt;Erfolgs-/Fehlerquoten&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="400" y="260" width="250" height="60" as="geometry" />
+          <mxGeometry x="489" y="260" width="250" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-14" value="" style="line;strokeWidth=2;html=1;dashed=1;" vertex="1" parent="1">
-          <mxGeometry x="120" y="120" width="390" height="10" as="geometry" />
+          <mxGeometry x="209" y="120" width="390" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ru2G3VzyaBEJT_psao-n-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="ru2G3VzyaBEJT_psao-n-15" target="ru2G3VzyaBEJT_psao-n-5">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-15" value="/SMRT/PROTVALUES" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry y="350" width="130" height="80" as="geometry" />
+          <mxGeometry x="89" y="360" width="130" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
