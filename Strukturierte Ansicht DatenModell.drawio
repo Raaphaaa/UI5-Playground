@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
   <diagram name="Seite-1" id="xtS-RTxyF89VJCSjxANe">
-    <mxGraphModel dx="6658" dy="2664" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4831" dy="1630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -662,10 +662,10 @@
             <mxRectangle width="200" height="51" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--325" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TMRvNmBy3gaYvKD6rry--10" target="TMRvNmBy3gaYvKD6rry--307">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--325" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=openThin;endFill=0;curved=0;" edge="1" parent="1" source="TMRvNmBy3gaYvKD6rry--10" target="TMRvNmBy3gaYvKD6rry--307">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--326" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="TMRvNmBy3gaYvKD6rry--14" target="TMRvNmBy3gaYvKD6rry--310">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--326" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=default;strokeWidth=3;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;endArrow=openThin;endFill=0;curved=0;" edge="1" parent="1" source="TMRvNmBy3gaYvKD6rry--14" target="TMRvNmBy3gaYvKD6rry--310">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
