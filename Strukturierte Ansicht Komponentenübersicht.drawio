@@ -34,6 +34,12 @@
         <mxCell id="ru2G3VzyaBEJT_psao-n-10" value="Übersicht Testfälle&lt;div&gt;Fehlerkategorien&lt;/div&gt;&lt;div&gt;Erfolgs-/Fehlerquoten&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="400" y="260" width="250" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="ru2G3VzyaBEJT_psao-n-14" value="" style="line;strokeWidth=2;html=1;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="390" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="ru2G3VzyaBEJT_psao-n-15" value="/SMRT/PROTVALUES" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="370" width="130" height="80" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
