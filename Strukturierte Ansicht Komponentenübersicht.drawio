@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/141.0.0.0 Safari/537.36" version="28.2.8">
   <diagram name="Seite-1" id="3jQrXUbkpkXriSrU0XMB">
-    <mxGraphModel dx="908" dy="466" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="984" dy="502" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -26,13 +26,13 @@
           <mxGeometry x="319" y="370" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-6" value="Übergreifende Analyse-App für abgeschlossene Testläufe" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="489" y="150" width="201" height="60" as="geometry" />
+          <mxGeometry x="489" y="150" width="191" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-9" value="Anzeige der Datensätze&lt;div&gt;Vergleich Ergebnis / Erwartung&lt;/div&gt;&lt;div&gt;Anpassung&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Ergebnis / Erwartung&lt;/span&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="489" y="370" width="250" height="60" as="geometry" />
+          <mxGeometry x="489" y="370" width="191" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-10" value="Übersicht Testfälle&lt;div&gt;Fehlerkategorien&lt;/div&gt;&lt;div&gt;Erfolgs-/Fehlerquoten&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="489" y="260" width="250" height="60" as="geometry" />
+          <mxGeometry x="489" y="260" width="191" height="60" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-14" value="" style="line;strokeWidth=2;html=1;dashed=1;" vertex="1" parent="1">
           <mxGeometry x="209" y="120" width="390" height="10" as="geometry" />
