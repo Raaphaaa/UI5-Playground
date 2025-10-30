@@ -38,7 +38,7 @@
           <mxGeometry x="120" y="120" width="390" height="10" as="geometry" />
         </mxCell>
         <mxCell id="ru2G3VzyaBEJT_psao-n-15" value="/SMRT/PROTVALUES" style="shape=datastore;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="20" y="370" width="130" height="80" as="geometry" />
+          <mxGeometry y="350" width="130" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
