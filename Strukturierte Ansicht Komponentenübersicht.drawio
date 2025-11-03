@@ -46,6 +46,45 @@
         <mxCell id="yfemjxVszC3JtRzcF6bn-2" value="Tatsächliche/Erwartete Werte auf Datenbank-Feldebene&lt;div&gt;Zugeordnet zu Testfall + Testlauf&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="58.5" y="290" width="191" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yfemjxVszC3JtRzcF6bn-10" target="yfemjxVszC3JtRzcF6bn-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-10" value="Testszenario??" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="130" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yfemjxVszC3JtRzcF6bn-12" target="yfemjxVszC3JtRzcF6bn-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-12" value="Testlauf" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=none;startFill=0;" edge="1" parent="1" source="yfemjxVszC3JtRzcF6bn-14" target="yfemjxVszC3JtRzcF6bn-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-14" value="Testfall" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="340" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-15" value="Testdaten" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="450" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="yfemjxVszC3JtRzcF6bn-16" target="yfemjxVszC3JtRzcF6bn-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-16" value="Testbereich" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="860" y="30" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-18" value="Fasst Testdaten aus z.B. einer Datenbanktabelle als übergeordnetes Objekt zusammen" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="340" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-19" value="Bezeichnet einen durchgeführten Test und besteht aus einem oder mehreren Testfällen, die beim Lauf ausgeführt/geprüft werden." style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="230" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-20" value="Fasst mehrere Testläufe zusammen??" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="130" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="yfemjxVszC3JtRzcF6bn-21" value="Überordner für Testszenarien aus einem gemeinsamen Themengebiet/Bereich" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="30" width="220" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
