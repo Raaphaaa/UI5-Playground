@@ -5,7 +5,7 @@
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-253" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="90" y="660" width="590" height="1250" as="geometry" />
+          <mxGeometry x="90" y="680" width="590" height="1230" as="geometry" />
         </mxCell>
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-1" value="" style="childLayout=tableLayout;recursiveResize=0;shadow=0;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="120" y="215" width="510" height="328" as="geometry" />
@@ -742,7 +742,7 @@
           <mxGeometry x="120" y="1790" width="340" height="50" as="geometry" />
         </mxCell>
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-255" value="Mapping auf neues JSON-Model" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=19;fontStyle=1" vertex="1" parent="1">
-          <mxGeometry x="230" y="670" width="310" height="30" as="geometry" />
+          <mxGeometry x="230" y="690" width="310" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
