@@ -7,10 +7,24 @@ sap.ui.define(
         "sap/ui/model/Sorter",
         "sap/ui/model/json/JSONModel",
         "sap/ui/table/Column",
+        "sap/m/table/columnmenu/Menu",
         "sap/m/Label",
         "sap/m/Text",
+        "sap/m/ObjectStatus",
     ],
-    (formatter, BaseController, Filter, FilterOperator, Sorter, JSONModel, Column, Label, Text) => {
+    (
+        formatter,
+        BaseController,
+        Filter,
+        FilterOperator,
+        Sorter,
+        JSONModel,
+        Column,
+        ColumnHeader,
+        Label,
+        Text,
+        ObjectStatus
+    ) => {
         "use strict";
 
         return BaseController.extend("balatro.balatro.controller.Hand", {
@@ -37,38 +51,51 @@ sap.ui.define(
                     },
                 });
 
-                // zuvor noch Daten aus Backend auslesen mit TC_ID, PROTOCOL_ID usw.
-                this.getView().byId("TreeTable").removeAllColumns();
+                // vorher noch Daten aus Backend auslesen mit TC_ID, PROTOCOL_ID usw.
                 this._generateTableColumns();
                 this._mapTableData();
-
-                // const oTreeTable = this.getView().byId("TreeTable");
-                // let oNewCol = new sap.ui.table.Column({
-                //     label: new sap.m.Label({ text: "Color" }),
-                //     template: new sap.m.Text({ text: "{NeuesKartenModel>Color}" }),
-                // });
-                // oTreeTable.addColumn(oNewCol);
-                // oNewCol = new sap.ui.table.Column({
-                //     label: new sap.m.Label({ text: "Value" }),
-                //     template: new sap.m.Text({ text: "{NeuesKartenModel>Value}" }),
-                // });
-                // oTreeTable.addColumn(oNewCol);
             },
 
             _generateTableColumns() {
+                // this.getView().byId("TreeTable").removeAllColumns();
+                this.getView().byId("Table").removeAllColumns();
+
                 const oModel = this.getView().getModel("data").oData;
+
+                // einzigartige Spaltennamen filtern
                 this.tableColumns = [...new Set(oModel.map((d) => `${d.FIELDNAME}`))];
 
                 this.tableColumns.forEach(function (sColumnName) {
-                    const oTreeTable = this.getView().byId("TreeTable");
+                    // Beschreibung zum technischen Feldnamen auslesen
                     const sDescr = oModel.find(
                         (item) => item.FIELDNAME === sColumnName && item.FIELD_DESCR
                     )?.FIELD_DESCR;
-                    let oNewColumn = new Column({
-                        label: new Label({ text: sDescr ?? sColumnName }),
-                        template: new Text({ text: `{mappedData>${sColumnName}}` }),
+
+                    // Label als Column Header
+                    let oLabel = new Label({ text: sDescr ?? sColumnName });
+
+                    // Template, um das Binding an das neue JSON-Model zu hinterlegen
+                    let oTemplate = new ObjectStatus({
+                        text: `{mappedData>${sColumnName}}`,
+                        state: {
+                            formatter: this.formatter.formatText,
+                            parts: [`mappedData>${sColumnName}`, `mappedData>expected/${sColumnName}`],
+                        },
+                        inverted: {
+                            formatter: this.formatter.invertText,
+                            parts: [`mappedData>${sColumnName}`, `mappedData>expected/${sColumnName}`],
+                        },
                     });
-                    oTreeTable.addColumn(oNewColumn);
+
+                    let oNewColumn = new Column({
+                        label: oLabel,
+                        template: oTemplate,
+                    });
+
+                    // const oTreeTable = this.getView().byId("TreeTable");
+                    // oTreeTable.addColumn(oNewColumn);
+                    const oTable = this.getView().byId("Table");
+                    oTable.addColumn(new sap.m.Column({ header: oLabel }));
                 }, this);
             },
 
@@ -76,39 +103,57 @@ sap.ui.define(
                 const oModel = this.getView().getModel("data").oData;
                 const grouped = {};
 
+                // 1 Datensatz enthält den Wert für 1 Feld im späteren Model + den erwarteten Wert
                 for (const item of oModel) {
-                    const actual = item.LINE_ACTUAL * 2;
-                    const expected = actual + 1;
+                    const actual = item.LINE_ACTUAL;
+
+                    // Zeile existiert noch nicht im neuen Model --> neue Zeile mit Zeilennummer erstellen für Rückwärts-Mapping
                     if (!grouped[actual]) {
-                        grouped[actual] = { LINE_ACTUAL: actual };
-                        grouped[expected] = { LINE_ACTUAL: expected };
+                        grouped[actual] = { LINE_ACTUAL: actual, expanded: false, expected: {} };
                     }
+                    // Ziel-Feld und Wert im Model in der Zeile einfügen
                     grouped[actual][item.FIELDNAME] = item.VALUE_ACTUAL;
-                    grouped[expected][item.FIELDNAME] = item.VALUE_EXPECTED;
+
+                    // Ziel-Feld und erwarteter Wert im Model in der "Erwartete-Werte-Struktur" einfügen
+                    grouped[actual]["expected"][item.FIELDNAME] = item.VALUE_EXPECTED;
                 }
+
                 let oMappedData = new JSONModel({ mappedData: grouped });
                 this.getView().setModel(oMappedData, "mappedData");
-
-                // Oder als Einzeiler:
-                // this.getView().setModel(
-                //     new JSONModel({
-                //         mappedData: this.getView()
-                //             .getModel("data")
-                //             .oData.reduce((g, i) => {
-                //                 const a = i.LINE_ACTUAL * 2,
-                //                     e = a + 1;
-                //                 if (!g[a]) {
-                //                     g[a] = { LINE_ACTUAL: a };
-                //                     g[e] = { LINE_ACTUAL: e };
-                //                 }
-                //                 g[a][i.FIELDNAME] = i.VALUE_ACTUAL;
-                //                 g[e][i.FIELDNAME] = i.VALUE_EXPECTED;
-                //                 return g;
-                //             }, {}),
-                //     }),
-                //     "mappedData"
-                // );
             },
+
+            createTableItem(sId, oContext) {
+                let oColumnListItem = new sap.m.ColumnListItem({
+                    type: "Active",
+                    press: (oEvent) => {
+                        const oItemContext = oEvent.getSource().getBindingContext("mappedData");
+                        const bCurrent = oItemContext.getProperty("expanded");
+                        oItemContext.getModel().setProperty(oItemContext.getPath() + "/expanded", !bCurrent);
+                    },
+                });
+
+                this.tableColumns.forEach(function (ColumnName) {
+                    let oVBox = new sap.m.VBox();
+
+                    let oNewCell = new sap.m.Text({ text: oContext.getProperty(`${ColumnName}`) });
+                    oVBox.addItem(oNewCell);
+
+                    let oExpectedCell = new sap.m.Text({
+                        text: oContext.getProperty(`expected/${ColumnName}`),
+                        visible: oContext.getProperty("expanded"),
+                    });
+                    oVBox.addItem(oExpectedCell);
+
+                    oColumnListItem.addCell(oVBox);
+                });
+
+                return oColumnListItem;
+            },
+
+            // onItemPress(oEvent) {
+            //     let oItem = oEvent.getSource().getBindingContext("items");
+            //     oItem.setProperty("expanded", !oItem.getProperty("expanded"));
+            // },
 
             _RefreshModelData() {
                 this.oModel.read(this.oKey + "/to_Cards", {

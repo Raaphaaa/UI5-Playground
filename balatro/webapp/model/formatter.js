@@ -42,5 +42,19 @@ sap.ui.define([], function () {
         formatDeck(sDeckNr) {
             return "../pictures/Decks/" + sDeckNr + ".png";
         },
+
+        formatText(ActualValue, ExpectedValue) {
+            if (ActualValue !== ExpectedValue && ExpectedValue) {
+                return sap.ui.core.ValueState.Error;
+            }
+            return sap.ui.core.ValueState.None;
+        },
+
+        invertText(ActualValue, ExpectedValue) {
+            if (ActualValue !== ExpectedValue && ExpectedValue) {
+                return true;
+            }
+            return false;
+        },
     };
 });

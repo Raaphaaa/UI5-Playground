@@ -4,7 +4,8 @@
         "LINE_ACTUAL": 1,
         "FIELDNAME": "ID",
         "VALUE_EXPECTED": "1001",
-        "VALUE_ACTUAL": "1001"
+        "VALUE_ACTUAL": "1001",
+        "FIELD_DESCR": "Nummer"
     },
     {
         "LINE_EXPECTED": 1,

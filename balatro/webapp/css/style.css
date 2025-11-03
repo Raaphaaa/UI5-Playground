@@ -1,1 +1,9 @@
-/* Enter your custom styles here */
+.cellGreen {
+    background-color: #03b42c !important;
+    font-weight: bolder;
+}
+
+.cellRed {
+    color: #f86471 !important;
+    font-weight: bolder;
+}

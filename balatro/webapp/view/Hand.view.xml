@@ -4,49 +4,34 @@
     xmlns:core="sap.ui.core"
     xmlns:table="sap.ui.table"
     xmlns="sap.m">
-    <table:TreeTable id="TreeTable" rows="{path: 'mappedData>/mappedData'}">
-        <!-- <table:columns>
-            <table:Column>
-                <Text text="Color" />
-                <table:template>
-                    <Text text="{NeuesKartenModel>Color}" />
-                </table:template>
-            </table:Column>
-            <table:Column>
-                <Text text="Value" />
-                <table:template>
-                    <Text text="{NeuesKartenModel>Value}" />
-                </table:template>
-            </table:Column>
-        </table:columns> -->
-        <!-- <items>
-            <ColumnListItem>
-                <cells>
-                    <Text text="{NeuesKartenModel>Color}" />
-                </cells>
-                <cells>
-                    <Text text="{NeuesKartenModel>Value}" />
-                </cells>
-            </ColumnListItem>
-        </items> -->
-    </table:TreeTable>
-    <!-- ,
-    filters: [{
-    path: 'IsHandCard',
-    operator: 'EQ',
-    value1: true
-    }]}" -->
-    <HBox
-        id="HBoxHandCards"
-        items="{ 
+    <!-- <table:TreeTable
+        id="TreeTable"
+        rows="{path: 'mappedData>/mappedData'}">
+    </table:TreeTable> -->
+    <Page>
+        <Table
+            id="Table"
+            alternateRowColors="true"
+            growing="true"
+            growingThreshold="10"
+            mode="MultiSelect"
+            items="{
+            path: 'mappedData>/mappedData',
+            factory: '.createTableItem'}">
+        </Table>
+
+
+        <HBox
+            id="HBoxHandCards"
+            items="{ 
             path: 'cards>/cards'}"
-        alignItems="End"
-        width="{Settings>/totalwidth}px"
-        height="{= ${Settings>/height} * 1.2}px">
-        <items>
-            <VBox
-                height="{= ${Settings>/height} * (${cards>IsSelected} ? 1.2 : 1)}px"
-                width="{ 
+            alignItems="End"
+            width="{Settings>/totalwidth}px"
+            height="{= ${Settings>/height} * 1.2}px">
+            <items>
+                <VBox
+                    height="{= ${Settings>/height} * (${cards>IsSelected} ? 1.2 : 1)}px"
+                    width="{ 
                     formatter: '.formatter.formatWidth',
                     parts: [
                         'Settings>/width',
@@ -54,36 +39,36 @@
       '${$index}'
                         ]
                     }">
-                <dragDropConfig>
-                    <dnd:DropInfo
-                        groupName="cards"
-                        drop="onDrop" />
-                </dragDropConfig>
-                <VBox
-                    height="0"
-                    width="0">
-                    <Image
-                        mode="Image"
-                        height="{Settings>/height}px"
-                        width="{Settings>/width}px"
-                        press=".onSelectCard"
-                        src="{
+                    <dragDropConfig>
+                        <dnd:DropInfo
+                            groupName="cards"
+                            drop="onDrop" />
+                    </dragDropConfig>
+                    <VBox
+                        height="0"
+                        width="0">
+                        <Image
+                            mode="Image"
+                            height="{Settings>/height}px"
+                            width="{Settings>/width}px"
+                            press=".onSelectCard"
+                            src="{
                             formatter: '.formatter.formatEnhancement',
                             parts: [
                                 'cards>Enhancement'
                                 ] 
                             }" />
-                </VBox>
+                    </VBox>
 
-                <VBox
-                    height="0"
-                    width="0">
-                    <Image
-                        mode="Image"
-                        height="{Settings>/height}px"
-                        width="{Settings>/width}px"
-                        press=".onSelectCard"
-                        src="{=
+                    <VBox
+                        height="0"
+                        width="0">
+                        <Image
+                            mode="Image"
+                            height="{Settings>/height}px"
+                            width="{Settings>/width}px"
+                            press=".onSelectCard"
+                            src="{=
                             ${cards>Enhancement} === 6 ? '' :
                             ${ 
                                 formatter: '.formatter.formatValue',
@@ -92,50 +77,51 @@
                                     'cards>Value'
                                     ] 
                             } }" />
-                </VBox>
-                <VBox
-                    height="0"
-                    width="0">
-                    <Image
-                        mode="Image"
-                        height="{Settings>/height}px"
-                        width="{Settings>/width}px"
-                        press=".onSelectCard"
-                        src="{
+                    </VBox>
+                    <VBox
+                        height="0"
+                        width="0">
+                        <Image
+                            mode="Image"
+                            height="{Settings>/height}px"
+                            width="{Settings>/width}px"
+                            press=".onSelectCard"
+                            src="{
                             formatter: '.formatter.formatEdition',
                             parts: [
                                 'cards>Edition'
                                 ] 
                             }" />
-                </VBox>
-                <VBox
-                    height="0"
-                    width="0">
+                    </VBox>
+                    <VBox
+                        height="0"
+                        width="0">
 
-                    <Image
-                        mode="Image"
-                        height="{Settings>/height}px"
-                        width="{Settings>/width}px"
-                        press=".onSelectCard"
-                        src="{
+                        <Image
+                            mode="Image"
+                            height="{Settings>/height}px"
+                            width="{Settings>/width}px"
+                            press=".onSelectCard"
+                            src="{
                             formatter: '.formatter.formatSeal',
                             parts: [
                                 'cards>Seal'
                                 ] 
                         }">
 
-                        <dragDropConfig>
-                            <dnd:DragInfo
-                                groupName="cards" />
-                        </dragDropConfig>
-                    </Image>
+                            <dragDropConfig>
+                                <dnd:DragInfo
+                                    groupName="cards" />
+                            </dragDropConfig>
+                        </Image>
+                    </VBox>
                 </VBox>
-            </VBox>
-        </items>
-    </HBox>
-    <HBox alignItems="Center" width="100%">
-        <Button text="Sort by Color" press=".sortByColor" />
-        <Button text="Sort by Value" press=".sortByValue" />
-        <Button text="Draw Card" press=".onDrawCard" />
-    </HBox>
+            </items>
+        </HBox>
+        <HBox alignItems="Center" width="100%">
+            <Button text="Sort by Color" press=".sortByColor" />
+            <Button text="Sort by Value" press=".sortByValue" />
+            <Button text="Draw Card" press=".onDrawCard" />
+        </HBox>
+    </Page>
 </mvc:View>
