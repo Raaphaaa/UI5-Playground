@@ -341,8 +341,8 @@
             <mxRectangle width="87" height="40" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Lv0tREW0T8N9VX-8bjc9-103" value="Für jeden Eintrag im Feldkatalog wird im Treetable-Control eine Spalte erstellt" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-172.5" y="804" width="172.5" height="56" as="geometry" />
+        <mxCell id="Lv0tREW0T8N9VX-8bjc9-103" value="Wird für das Generieren des TreeTable-Controls benötigt. Die Spalten werden dynamisch zur Laufzeit aus diesem Feldkatalog aufgebaut" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-172.5" y="804" width="172.5" height="86" as="geometry" />
         </mxCell>
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-130" value="" style="childLayout=tableLayout;recursiveResize=0;shadow=0;fillColor=none;" vertex="1" parent="1">
           <mxGeometry x="130" y="760" width="510" height="93" as="geometry" />
@@ -403,13 +403,13 @@
             <mxRectangle width="100" height="46" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Lv0tREW0T8N9VX-8bjc9-173" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Das Wert wird im neuen Model an diesem Index in die Struktur eingefügt&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="Lv0tREW0T8N9VX-8bjc9-173" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Der Wert wird im neuen Model an diesem &lt;b&gt;Index&amp;nbsp; &lt;/b&gt;eingefügt&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="130" y="853" width="90" height="67" as="geometry" />
         </mxCell>
-        <mxCell id="Lv0tREW0T8N9VX-8bjc9-175" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Der Wert wird unter diesem Feldnamen im neuen Model eingefügt&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="Lv0tREW0T8N9VX-8bjc9-175" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Der Wert wird unter diesem &lt;b&gt;Feldnamen &lt;/b&gt;im neuen Model eingefügt&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="230" y="853" width="90" height="67" as="geometry" />
         </mxCell>
-        <mxCell id="Lv0tREW0T8N9VX-8bjc9-176" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wert, der ins neue Model übernommen wird&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+        <mxCell id="Lv0tREW0T8N9VX-8bjc9-176" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;Wert, der eingefügt wird&lt;/font&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="450" y="853" width="80" height="67" as="geometry" />
         </mxCell>
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-178" value="&lt;b&gt;JSON-Model:&amp;nbsp;&lt;/b&gt;&lt;div&gt;An Index 1 wird im Feld &quot;CARRID&quot; der Wert &quot;AA&quot; hinterlegt&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
