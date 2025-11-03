@@ -7,7 +7,7 @@
         <mxCell id="TMRvNmBy3gaYvKD6rry--298" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
           <mxGeometry x="60" y="1090" width="1520" height="590" as="geometry" />
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--1" value="/SMRT/PROTVALUES (vereinfacht)" style="shape=table;startSize=60;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#82b366;fontSize=16;fillColor=#d5e8d4;" parent="1" vertex="1">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--1" value="/SMRT/PROTVALUES (vereinfacht)&#xa;Werte auf Datenbankfeld-Ebene, Testlauf/-fall abhängig" style="shape=table;startSize=60;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#82b366;fontSize=16;fillColor=#d5e8d4;" parent="1" vertex="1">
           <mxGeometry x="90" y="50" width="400" height="935" as="geometry" />
         </mxCell>
         <mxCell id="TMRvNmBy3gaYvKD6rry--2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="TMRvNmBy3gaYvKD6rry--1" vertex="1">
