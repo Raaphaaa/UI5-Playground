@@ -533,7 +533,7 @@
             <mxRectangle width="200" height="55" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="TMRvNmBy3gaYvKD6rry--277" value="Erwartete Werte (dynamisch)&#xa;Struktur entspricht der von den tatsächlichen Werten" style="shape=table;startSize=60;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#b85450;fontSize=16;fillColor=#f8cecc;" parent="1" vertex="1">
+        <mxCell id="TMRvNmBy3gaYvKD6rry--277" value="Erwartete Werte (dynamisch)&#xa;Struktur wie für die tatsächlichen Werten" style="shape=table;startSize=60;container=1;collapsible=0;childLayout=tableLayout;strokeColor=#b85450;fontSize=16;fillColor=#f8cecc;" parent="1" vertex="1">
           <mxGeometry x="1110" y="1373.75" width="400" height="277.5" as="geometry" />
         </mxCell>
         <mxCell id="TMRvNmBy3gaYvKD6rry--281" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" parent="TMRvNmBy3gaYvKD6rry--277" vertex="1">
