@@ -51,13 +51,13 @@
         "LINE_ACTUAL": 2,
         "FIELDNAME": "NAME",
         "VALUE_EXPECTED": "Schmidt",
-        "VALUE_ACTUAL": "Schmid"
+        "VALUE_ACTUAL": "Müller"
     },
     {
         "LINE_EXPECTED": 2,
         "LINE_ACTUAL": 2,
         "FIELDNAME": "CITY",
-        "VALUE_EXPECTED": "Hamburg",
+        "VALUE_EXPECTED": "Hamburg meine Perle, du wunderschöne Stadt",
         "VALUE_ACTUAL": "Hamburg"
     },
     {
@@ -121,7 +121,7 @@
         "LINE_ACTUAL": 4,
         "FIELDNAME": "NAME",
         "VALUE_EXPECTED": "Becker",
-        "VALUE_ACTUAL": "Becke"
+        "VALUE_ACTUAL": "Müller"
     },
     {
         "LINE_EXPECTED": 4,

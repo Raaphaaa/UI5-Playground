@@ -42,7 +42,6 @@ sap.ui.define(
                 this.oKey = this.oModel.createKey("/Game", {
                     GameId: oArgs.GameId,
                 });
-                this._RefreshModelData();
 
                 oView.bindElement({
                     path: this.oKey,
@@ -54,8 +53,50 @@ sap.ui.define(
                 // vorher noch Daten aus Backend auslesen mit TC_ID, PROTOCOL_ID usw.
                 this._generateTableColumns();
                 this._mapTableData();
+                this._generateFilterBarFields();
             },
 
+            _generateFilterBarFields() {
+                const oFilterBar = this.byId("FilterBar");
+                const oView = this.getView();
+                oFilterBar.addFilterGroupItem(oFilterBar.removeAllFilterGroupItems()[0]);
+
+                const oMappedData = oView.getModel("mappedData").getData();
+                const oModel = oView.getModel("data").getData();
+
+                this.tableColumns.forEach(function (sColumnName) {
+                    // Beschreibung zum technischen Feldnamen auslesen
+                    const sDescr = oModel.find(
+                        (item) => item.FIELDNAME === sColumnName && item.FIELD_DESCR
+                    )?.FIELD_DESCR;
+
+                    let aUniqueValues = [...new Set(oMappedData.map((d) => d[sColumnName]))].map(function (d) {
+                        return { VALUE: d };
+                    });
+                    let oNewModel = new sap.ui.model.json.JSONModel(aUniqueValues);
+                    oView.setModel(oNewModel, `_FILTER_${sColumnName}`);
+
+                    const oItemTemplate = new sap.ui.core.Item({
+                        key: `{_FILTER_${sColumnName}>VALUE}`,
+                        text: `{_FILTER_${sColumnName}>VALUE}`,
+                    });
+                    let oMultiComboBox = new sap.m.MultiComboBox({
+                        name: `${sColumnName}`,
+                        items: {
+                            path: `_FILTER_${sColumnName}>/`,
+                            template: oItemTemplate,
+                        },
+                    });
+                    let oCustomFilter = new sap.ui.comp.filterbar.FilterGroupItem({
+                        groupName: "StrukturierteAnsicht",
+                        name: `${sColumnName}`,
+                        label: sDescr,
+                        visibleInFilterBar: true,
+                        control: oMultiComboBox,
+                    });
+                    oFilterBar.addFilterGroupItem(oCustomFilter);
+                });
+            },
             _generateTableColumns() {
                 // this.getView().byId("TreeTable").removeAllColumns();
                 this.getView().byId("Table").removeAllColumns();
@@ -74,38 +115,22 @@ sap.ui.define(
                     // Label als Column Header
                     let oLabel = new Label({ text: sDescr ?? sColumnName });
 
-                    // Template, um das Binding an das neue JSON-Model zu hinterlegen
-                    let oTemplate = new ObjectStatus({
-                        text: `{mappedData>${sColumnName}}`,
-                        state: {
-                            formatter: this.formatter.formatText,
-                            parts: [`mappedData>${sColumnName}`, `mappedData>expected/${sColumnName}`],
-                        },
-                        inverted: {
-                            formatter: this.formatter.invertText,
-                            parts: [`mappedData>${sColumnName}`, `mappedData>expected/${sColumnName}`],
-                        },
-                    });
-
-                    let oNewColumn = new Column({
-                        label: oLabel,
-                        template: oTemplate,
-                    });
-
-                    // const oTreeTable = this.getView().byId("TreeTable");
-                    // oTreeTable.addColumn(oNewColumn);
                     const oTable = this.getView().byId("Table");
-                    oTable.addColumn(new sap.m.Column({ header: oLabel }));
+                    oTable.addColumn(
+                        new sap.m.Column({
+                            header: oLabel,
+                        })
+                    );
                 }, this);
             },
 
             _mapTableData() {
                 const oModel = this.getView().getModel("data").oData;
-                const grouped = {};
+                const grouped = [];
 
                 // 1 Datensatz enthält den Wert für 1 Feld im späteren Model + den erwarteten Wert
                 for (const item of oModel) {
-                    const actual = item.LINE_ACTUAL;
+                    const actual = item.LINE_ACTUAL - 1;
 
                     // Zeile existiert noch nicht im neuen Model --> neue Zeile mit Zeilennummer erstellen für Rückwärts-Mapping
                     if (!grouped[actual]) {
@@ -118,8 +143,55 @@ sap.ui.define(
                     grouped[actual]["expected"][item.FIELDNAME] = item.VALUE_EXPECTED;
                 }
 
-                let oMappedData = new JSONModel({ mappedData: grouped });
+                let oMappedData = new JSONModel(grouped);
                 this.getView().setModel(oMappedData, "mappedData");
+            },
+
+            onSearch: function () {
+                let oTable = this.getView().byId("Table");
+                let oFilterBar = this.getView().byId("FilterBar");
+
+                let that = this;
+                let aFilters = oFilterBar.getFilterGroupItems().reduce(function (aResult, oFilterGroupItem) {
+                    let oControl = oFilterGroupItem.getControl();
+                    let aSelectedKeys = {};
+                    let aFilters = [];
+                    // MultiComboBox
+                    if (oControl.getSelectedKeys) {
+                        aSelectedKeys = oControl.getSelectedKeys();
+                        aFilters = aSelectedKeys.map(function (sSelectedKey) {
+                            return new Filter({
+                                path: oFilterGroupItem.getName(),
+                                operator: FilterOperator.Contains,
+                                value1: sSelectedKey,
+                            });
+                        });
+                    }
+                    // Search Field
+                    else if (oControl.getValue().trim()) {
+                        aSelectedKeys = oControl.getValue().trim();
+                        that.tableColumns.forEach(function (sColumnName) {
+                            aFilters.push(
+                                new Filter({
+                                    path: sColumnName,
+                                    operator: FilterOperator.Contains,
+                                    value1: aSelectedKeys,
+                                })
+                            );
+                        });
+                    }
+                    if (aSelectedKeys.length > 0) {
+                        aResult.push(
+                            new Filter({
+                                filters: aFilters,
+                                and: false,
+                            })
+                        );
+                    }
+                    return aResult;
+                }, []);
+                oTable.getBinding("items").filter(aFilters);
+                oTable.setShowOverlay(false);
             },
 
             createTableItem(sId, oContext) {
@@ -132,96 +204,59 @@ sap.ui.define(
                     },
                 });
 
+                let bWarning = false;
                 this.tableColumns.forEach(function (ColumnName) {
-                    let oVBox = new sap.m.VBox();
+                    let oVBox = new sap.m.VBox({
+                        fitContainer: true,
+                        alignItems: "Stretch",
+                    });
 
-                    let oNewCell = new sap.m.Text({ text: oContext.getProperty(`${ColumnName}`) });
+                    let oNewCell = new sap.m.Text({
+                        text: oContext.getProperty(`${ColumnName}`),
+                    });
+                    oNewCell.addStyleClass("roundCorners");
                     oVBox.addItem(oNewCell);
 
-                    let oExpectedCell = new sap.m.Text({
+                    const sExpected = oContext.getProperty(`expected/${ColumnName}`);
+                    const sActual = oContext.getProperty(`${ColumnName}`);
+                    // let isVisible = oContext.getProperty("expanded");
+                    if (sActual !== sExpected && sExpected) {
+                        oNewCell.addStyleClass("italicText");
+                        // isVisible = true;
+                        bWarning = true;
+                    }
+                    let oExpectedCell = new sap.m.Label({
                         text: oContext.getProperty(`expected/${ColumnName}`),
                         visible: oContext.getProperty("expanded"),
+                        wrapping: true,
                     });
                     oVBox.addItem(oExpectedCell);
-
                     oColumnListItem.addCell(oVBox);
                 });
-
+                if (bWarning) {
+                    oColumnListItem.addStyleClass("orangeBackground");
+                }
                 return oColumnListItem;
             },
 
-            // onItemPress(oEvent) {
-            //     let oItem = oEvent.getSource().getBindingContext("items");
-            //     oItem.setProperty("expanded", !oItem.getProperty("expanded"));
-            // },
-
-            _RefreshModelData() {
-                this.oModel.read(this.oKey + "/to_Cards", {
-                    filters: [new Filter({ path: "IsHandcard", operator: FilterOperator.EQ, value1: true })],
-                    success: function (oData) {
-                        if (oData.results.length > 0) {
-                            let aCards = oData.results;
-                            let aNewData = aCards.map((c) => ({
-                                Color: c.Color,
-                                Value: c.Value,
-                                IsHandCard: c.IsHandcard,
-                                IsSelected: c.IsSelected,
-                                DisplayPos: c.DisplayPos,
-                                Enhancement: c.Enhancement,
-                                Edition: c.Edition,
-                                Seal: c.Seal,
-                            }));
-                            this.getView().getModel("cards").setProperty("/cards", aNewData);
-                        }
-                    }.bind(this),
-                    // for (let i = 0; i < aCards.length; i += 2) {
-                    //     aNewData.push({
-                    //         Color: aCards[i].Color,
-                    //         Value: aCards[i + 1].Value,
-                    //         IsHandCard: true,
-                    //         IsSelected: true,
-                    //         DisplayPos: aCards[i].DisplayPos,
-                    //         Enhancement: aCards[i].Enhancement,
-                    //         Edition: aCards[i].Edition,
-                    //         Seal: aCards[i].Seal,
-                    //     });
-                    // }
-                    // const uniqueCardSet = [...new Set(aNewData.map((Card) => `${Card.Color}|${Card.Value}`))];
-                    // const uniqueColumns = uniqueCardSet.map((key) => {
-                    //     const [Color, Value] = key.split("|");
-                    //     return { Color, Value };
-                    // });
-                    // console.log(uniqueColumns);
-                });
-            },
-
             onSelectCard(oEvent) {
-                let oCard = oEvent.getSource().getBindingContext("cards");
-                const oModel = oCard.getModel();
-                oModel.setProperty(
+                let oCard = oEvent.getSource().getBindingContext();
+                this.oModel.setProperty(
                     oCard.getPath() + "/IsSelected",
-                    !oCard.getProperty(oCard.getPath() + "/IsSelected")
+                    !this.oModel.getProperty(oCard.getPath() + "/IsSelected")
                 );
             },
 
             onDrop(oEvent) {
                 // swap the 2 cards that were dragged/dropped
-                let oDragged = oEvent.getParameter("draggedControl").getBindingContext("cards").getPath();
-                let oDropped = oEvent.getParameter("droppedControl").getBindingContext("cards").getPath();
+                let oDragged = oEvent.getParameter("draggedControl").getBindingContext().getPath();
+                let oDropped = oEvent.getParameter("droppedControl").getBindingContext().getPath();
 
-                let pos1 = this.getView()
-                    .getModel("cards")
-                    .getProperty(oDragged + "/DisplayPos");
-                let pos2 = this.getView()
-                    .getModel("cards")
-                    .getProperty(oDropped + "/DisplayPos");
+                let pos1 = this.oModel.getProperty(oDragged + "/DisplayPos");
+                let pos2 = this.oModel.getProperty(oDropped + "/DisplayPos");
 
-                this.getView()
-                    .getModel("cards")
-                    .setProperty(oDragged + "/DisplayPos", pos2);
-                this.getView()
-                    .getModel("cards")
-                    .setProperty(oDropped + "/DisplayPos", pos1);
+                this.oModel.setProperty(oDragged + "/DisplayPos", pos2);
+                this.oModel.setProperty(oDropped + "/DisplayPos", pos1);
 
                 this._sortCards();
                 this.getView().getModel("Settings").setProperty("/currentlySortedBy", null);
@@ -229,7 +264,7 @@ sap.ui.define(
 
             _sortCards() {
                 const oBinding = this.byId("HBoxHandCards").getBinding("items");
-                oBinding.sort([new sap.ui.model.Sorter("DisplayPos")]);
+                oBinding.sort([new sap.ui.model.Sorter({ path: "DisplayPos", descending: true })]);
             },
 
             sortByColor() {
@@ -244,8 +279,7 @@ sap.ui.define(
 
                 aCards.forEach(
                     function (card, index) {
-                        const oModel = this.getView().getModel("cards");
-                        oModel.setProperty(card.path + "/DisplayPos", index + 1);
+                        this.oModel.setProperty(card.path + "/DisplayPos", index + 1);
                     }.bind(this),
                     this
                 );
@@ -266,8 +300,7 @@ sap.ui.define(
 
                 aCards.forEach(
                     function (card, index) {
-                        const oModel = this.getView().getModel("cards");
-                        oModel.setProperty(card.path + "/DisplayPos", index + 1);
+                        this.oModel.setProperty(card.path + "/DisplayPos", index + 1);
                     }.bind(this),
                     this
                 );
@@ -277,35 +310,47 @@ sap.ui.define(
             },
 
             onDrawCard() {
-                console.log(this.getView().byId("HBoxHandCards").getBinding("items"));
                 let oBinding = this.getView().getElementBinding().oElementContext;
                 let oParams = { GameId: oBinding.getProperty("GameId"), amount: 1 };
+
                 this.oModel.callFunction("/drawCards", {
                     method: "POST",
                     urlParameters: oParams,
                     etag: this.oModel.getETag(null, oBinding),
                     success: function () {
-                        this._RefreshModelData();
+                        this.oModel.read(this.oKey + "/to_Cards", {
+                            success: function (oData) {
+                                // switch (this.getView().getModel("Settings").getProperty("/currentlySortedBy")) {
+                                //     case "Color":
+                                //         this.sortByColor();
+                                //         break;
+                                //     case "Value":
+                                //         this.sortByValue();
+                                //         break;
+                                //     default:
+                                //         let aCards = this._getAllCards();
+                                //         aCards.forEach(function (card, index) {
+                                //             this.oModel.setProperty(card.path + "/DisplayPos", index + 1);
+                                //         }, this);
+                                //         this._sortCards();
+                                // }
+                            }.bind(this),
+                        });
+                    }.bind(this),
+                });
+            },
 
-                        console.log(this.getView().byId("HBoxHandCards").getBinding("items"));
-                        switch (this.getView().getModel("Settings").getProperty("/currentlySortedBy")) {
-                            case "Color":
-                                this.sortByColor();
-                                break;
-
-                            case "Value":
-                                this.sortByValue();
-                                break;
-
-                            default:
-                                let aCards = this._getAllCards();
-                                aCards.forEach(function (card, index) {
-                                    this.getView()
-                                        .getModel("cards")
-                                        .setProperty(card.path + "/DisplayPos", index + 1);
-                                }, this);
-                                this._sortCards();
-                        }
+            onDiscardCards() {
+                let oBinding = this.getView().getElementBinding().oElementContext;
+                let oParams = { GameId: oBinding.getProperty("GameId") };
+                this.oModel.callFunction("/discardCards", {
+                    method: "POST",
+                    urlParameters: oParams,
+                    etag: this.oModel.getETag(null, oBinding),
+                    success: function () {
+                        this.oModel.read(this.oKey + "/to_Cards", {
+                            success: function (oData) {}.bind(this),
+                        });
                     }.bind(this),
                 });
             },

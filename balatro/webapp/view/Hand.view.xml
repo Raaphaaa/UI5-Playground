@@ -2,41 +2,71 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns:dnd="sap.ui.core.dnd"
     xmlns:core="sap.ui.core"
+    xmlns:f="sap.f"
+    xmlns:fb="sap.ui.comp.filterbar"
     xmlns:table="sap.ui.table"
     xmlns="sap.m">
-    <!-- <table:TreeTable
-        id="TreeTable"
-        rows="{path: 'mappedData>/mappedData'}">
-    </table:TreeTable> -->
-    <Page>
-        <Table
-            id="Table"
-            alternateRowColors="true"
-            growing="true"
-            growingThreshold="10"
-            mode="MultiSelect"
-            items="{
-            path: 'mappedData>/mappedData',
-            factory: '.createTableItem'}">
-        </Table>
-
-
-        <HBox
+    <f:DynamicPage>
+        <f:header>
+            <f:DynamicPageHeader pinnable="true">
+                <f:content>
+                    <fb:FilterBar id="FilterBar" persistencyKey="myPersKey"
+                        useToolbar="false" search=".onSearch"
+                        filterChange=".onFilterChange"
+                        afterVariantLoad=".onAfterVariantLoad">
+                        <fb:filterGroupItems>
+                            <fb:FilterGroupItem name="Suche" groupName="StrukturierteAnsicht"
+                                label="Suche" visibleInFilterBar="true">
+                                <fb:control>
+                                    <SearchField
+                                        id="searchField"
+                                        placeholder="Suchen..."
+                                        liveChange=".onSelectionChange"
+                                        search="onSearch" />
+                                </fb:control>
+                            </fb:FilterGroupItem>
+                        </fb:filterGroupItems>
+                    </fb:FilterBar>
+                </f:content>
+            </f:DynamicPageHeader>
+        </f:header>
+        <f:content>
+            <Table
+                id="Table"
+                growing="true"
+                growingThreshold="10"
+                alternateRowColors="false"
+                mode="MultiSelect"
+                items="{
+                    path: 'mappedData>/',
+                    factory: '.createTableItem'}" />
+        </f:content>
+        <!-- cards>/cards -->
+        <!-- <HBox
             id="HBoxHandCards"
             items="{ 
-            path: 'cards>/cards'}"
+            path: 'to_Cards',
+            filters: [{
+                path: 'IsHandcard',
+                operator: 'EQ',
+                value1: true
+            }],
+            sorter: [{
+                path: 'DisplayPos',
+                descending: true
+            }]}"
             alignItems="End"
             width="{Settings>/totalwidth}px"
             height="{= ${Settings>/height} * 1.2}px">
             <items>
                 <VBox
-                    height="{= ${Settings>/height} * (${cards>IsSelected} ? 1.2 : 1)}px"
+                    height="{= ${Settings>/height} * (${IsSelected} ? 1.2 : 1)}px"
                     width="{ 
                     formatter: '.formatter.formatWidth',
                     parts: [
                         'Settings>/width',
                         'Settings>/totalwidth',
-      '${$index}'
+                        '${$index}'
                         ]
                     }">
                     <dragDropConfig>
@@ -55,7 +85,7 @@
                             src="{
                             formatter: '.formatter.formatEnhancement',
                             parts: [
-                                'cards>Enhancement'
+                                'Enhancement'
                                 ] 
                             }" />
                     </VBox>
@@ -69,12 +99,12 @@
                             width="{Settings>/width}px"
                             press=".onSelectCard"
                             src="{=
-                            ${cards>Enhancement} === 6 ? '' :
+                            ${Enhancement} === 6 ? '' :
                             ${ 
                                 formatter: '.formatter.formatValue',
                                 parts: [
-                                    'cards>Color',
-                                    'cards>Value'
+                                    'Color',
+                                    'Value'
                                     ] 
                             } }" />
                     </VBox>
@@ -89,7 +119,7 @@
                             src="{
                             formatter: '.formatter.formatEdition',
                             parts: [
-                                'cards>Edition'
+                                'Edition'
                                 ] 
                             }" />
                     </VBox>
@@ -105,7 +135,7 @@
                             src="{
                             formatter: '.formatter.formatSeal',
                             parts: [
-                                'cards>Seal'
+                                'Seal'
                                 ] 
                         }">
 
@@ -122,6 +152,7 @@
             <Button text="Sort by Color" press=".sortByColor" />
             <Button text="Sort by Value" press=".sortByValue" />
             <Button text="Draw Card" press=".onDrawCard" />
-        </HBox>
-    </Page>
+            <Button text="Discard" press=".onDiscardCards" />
+        </HBox> -->
+    </f:DynamicPage>
 </mvc:View>
