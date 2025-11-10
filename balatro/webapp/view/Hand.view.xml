@@ -31,15 +31,14 @@
             </f:DynamicPageHeader>
         </f:header>
         <f:content>
-            <Table
-                id="Table"
-                growing="true"
-                growingThreshold="10"
-                alternateRowColors="false"
-                mode="MultiSelect"
-                items="{
-                    path: 'mappedData>/',
-                    factory: '.createTableItem'}" />
+            <VBox>
+                <Panel expandable="true" expanded="true" headerText="sap.ui.table.TABLE">
+                    <table:TreeTable
+                        id="UiTable"
+                        rows="{mappedData>/}"
+                    />
+                </Panel>
+            </VBox>
         </f:content>
         <!-- cards>/cards -->
         <!-- <HBox

@@ -1,14 +1,9 @@
-.italicText {
+.highlightError {
     font-style: italic;
     color: #f83b3b;
     font-weight: bold;
-
-    /* color: black;
-    background-color: #f86c6c;
-    border-radius: 3px;
-    padding: 2px; */
 }
 
 .orangeBackground {
-    background: #ffd9ad !important;
+    background: #ffd9ad;
 }

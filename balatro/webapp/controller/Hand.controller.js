@@ -4,28 +4,15 @@ sap.ui.define(
         "balatro/balatro/controller/BaseController",
         "sap/ui/model/Filter",
         "sap/ui/model/FilterOperator",
-        "sap/ui/model/Sorter",
         "sap/ui/model/json/JSONModel",
-        "sap/ui/table/Column",
-        "sap/m/table/columnmenu/Menu",
-        "sap/m/Label",
         "sap/m/Text",
+        "sap/m/Label",
+        "sap/m/VBox",
         "sap/m/ObjectStatus",
+        "sap/ui/core/CustomData",
     ],
-    (
-        formatter,
-        BaseController,
-        Filter,
-        FilterOperator,
-        Sorter,
-        JSONModel,
-        Column,
-        ColumnHeader,
-        Label,
-        Text,
-        ObjectStatus
-    ) => {
-        "use strict";
+    (formatter, BaseController, Filter, FilterOperator, JSONModel, Text, Label, VBox, ObjectStatus, CustomData) => {
+        ("use strict");
 
         return BaseController.extend("balatro.balatro.controller.Hand", {
             formatter: formatter,
@@ -53,14 +40,65 @@ sap.ui.define(
                 // vorher noch Daten aus Backend auslesen mit TC_ID, PROTOCOL_ID usw.
                 this._generateTableColumns();
                 this._mapTableData();
+
+                const oUiTable = this.byId("UiTable");
+                oUiTable.attachRowsUpdated(this._highlightRows.bind(this));
+                oUiTable.attachCellClick(this.onCellClicked.bind(this));
+
                 this._generateFilterBarFields();
             },
 
-            _generateFilterBarFields() {
-                const oFilterBar = this.byId("FilterBar");
-                const oView = this.getView();
-                oFilterBar.addFilterGroupItem(oFilterBar.removeAllFilterGroupItems()[0]);
+            _highlightRows() {
+                // let oUiTable = this.getView().byId("UiTable");
+                // const aRows = oUiTable.getRows();
+                // const aColumns = oUiTable.getColumns();
+                // aRows.forEach((oRow) => {
+                //     // Felder aus der aktuellen Zeile (bestehend aus VBox mit 2 Text-Controls)
+                //     const aCells = oRow.getCells();
+                //     let bRowHighlighted = false;
+                //     aCells.forEach((oCell, i) => {
+                //         if (oCell instanceof sap.m.VBox) {
+                //             const aItems = oCell.getItems();
+                //             const oText = aItems[0];
+                //             bRowHighlighted = false;
+                //             // Felder highlighten
+                //             // Stichwort customData + Binding/CSS
+                //             const oContext = oRow.getBindingContext("mappedData");
+                //             if (oContext.getProperty(`${aColumns[i].getName()}_ERROR`)) {
+                //                 oText.addStyleClass("highlightError");
+                //                 bRowHighlighted = true;
+                //             } else {
+                //                 oText.removeStyleClass("highlightError");
+                //             }
+                //         }
+                //     });
+                //     if (bRowHighlighted) {
+                //         oRow.addStyleClass("orangeBackground");
+                //     } else {
+                //         oRow.removeStyleClass("orangeBackground");
+                //     }
+                // });
+            },
 
+            onCellClicked(oEvent) {
+                const oContext = oEvent.getParameter("rowBindingContext");
+                const sPath = oContext.getPath() + "/expanded";
+                const oModel = this.getView().getModel("mappedData");
+
+                console.log(oEvent.getParameter("cellControl"));
+                oModel.setProperty(sPath, !oModel.getProperty(sPath));
+                // Manueller Refresh für die Anpassung der Zeilenhöhe
+                const oUiTable = this.getView().byId("UiTable");
+                oUiTable.invalidate();
+            },
+
+            _generateFilterBarFields() {
+                // Filterbar neu aufbauen, Suchfeld beibehalten
+                const oFilterBar = this.byId("FilterBar");
+                const oSearchField = oFilterBar.removeAllFilterGroupItems()[0];
+                oFilterBar.addFilterGroupItem(oSearchField);
+
+                const oView = this.getView();
                 const oMappedData = oView.getModel("mappedData").getData();
                 const oModel = oView.getModel("data").getData();
 
@@ -70,10 +108,13 @@ sap.ui.define(
                         (item) => item.FIELDNAME === sColumnName && item.FIELD_DESCR
                     )?.FIELD_DESCR;
 
-                    let aUniqueValues = [...new Set(oMappedData.map((d) => d[sColumnName]))].map(function (d) {
+                    // Alle einzigartigen Feldwerte für das gegebene Feld <sColumnName> finden
+                    let aValues = [...new Set(oMappedData.map((d) => d[sColumnName]))];
+                    // Umwandlung für JSON-Model
+                    let aModelData = aValues.map(function (d) {
                         return { VALUE: d };
                     });
-                    let oNewModel = new sap.ui.model.json.JSONModel(aUniqueValues);
+                    let oNewModel = new sap.ui.model.json.JSONModel(aModelData);
                     oView.setModel(oNewModel, `_FILTER_${sColumnName}`);
 
                     const oItemTemplate = new sap.ui.core.Item({
@@ -87,6 +128,8 @@ sap.ui.define(
                             template: oItemTemplate,
                         },
                     });
+
+                    // Filter mit den gegebenen Werten erstellen
                     let oCustomFilter = new sap.ui.comp.filterbar.FilterGroupItem({
                         groupName: "StrukturierteAnsicht",
                         name: `${sColumnName}`,
@@ -97,58 +140,106 @@ sap.ui.define(
                     oFilterBar.addFilterGroupItem(oCustomFilter);
                 });
             },
-            _generateTableColumns() {
-                // this.getView().byId("TreeTable").removeAllColumns();
-                this.getView().byId("Table").removeAllColumns();
 
-                const oModel = this.getView().getModel("data").oData;
+            _generateTableColumns() {
+                const oModel = this.getView().getModel("data").getData();
+                const oUiTable = this.getView().byId("UiTable");
+                oUiTable.removeAllColumns();
 
                 // einzigartige Spaltennamen filtern
                 this.tableColumns = [...new Set(oModel.map((d) => `${d.FIELDNAME}`))];
-
                 this.tableColumns.forEach(function (sColumnName) {
-                    // Beschreibung zum technischen Feldnamen auslesen
+                    // SAP.UI.TABLE.TABLE
                     const sDescr = oModel.find(
                         (item) => item.FIELDNAME === sColumnName && item.FIELD_DESCR
                     )?.FIELD_DESCR;
 
-                    // Label als Column Header
-                    let oLabel = new Label({ text: sDescr ?? sColumnName });
+                    // let oTemplate = new VBox({
+                    //     fitContainer: true,
+                    //     height: "100%",
+                    //     alignItems: "Start",
+                    //     justifyContent: "SpaceBetween",
+                    // });
 
-                    const oTable = this.getView().byId("Table");
-                    oTable.addColumn(
-                        new sap.m.Column({
-                            header: oLabel,
+                    let oActual = new ObjectStatus({
+                        text: `{mappedData>${sColumnName}}`,
+                    });
+
+                    oActual.addCustomData(new CustomData({ key: "actualValue", value: `{mappedData>${sColumnName}}` }));
+                    oActual.addCustomData(
+                        new CustomData({
+                            key: "expectedValue",
+                            value: `{mappedData>expected/${sColumnName}}`,
                         })
                     );
+
+                    oActual.addEventDelegate({
+                        onAfterRendering: function (oEvent) {
+                            const oCtrl = oEvent.srcControl;
+                            const actual = oCtrl.data("actualValue");
+                            const expected = oCtrl.data("expectedValue");
+                            if (expected != undefined && (actual || expected)) {
+                                oCtrl.setState(actual === expected ? "None" : "Error");
+                                let oParent = oCtrl.getParent();
+                                oCtrl.addStyleClass("orangeBackground");
+                            } else {
+                                oCtrl.setState("None");
+                            }
+                        },
+                    });
+
+                    // let oExpected = new Label({
+                    //     text: `{mappedData>expected/${sColumnName}}`,
+                    //     visible: "{mappedData>expanded}",
+                    //     wrapping: true,
+                    // });
+                    // oTemplate.addItem(oActual);
+                    // oTemplate.addItem(oExpected);
+
+                    let oLabel = new Label({ text: sDescr ?? sColumnName });
+                    let oNewUiColumn = new sap.ui.table.Column({
+                        label: oLabel,
+                        template: oActual,
+                        sortProperty: `${sColumnName}`,
+                        name: `${sColumnName}`,
+                    });
+                    oUiTable.addColumn(oNewUiColumn);
                 }, this);
             },
-
             _mapTableData() {
-                const oModel = this.getView().getModel("data").oData;
-                const grouped = [];
+                const oModel = this.getView().getModel("data").getData();
+                const mappedData = [];
 
                 // 1 Datensatz enthält den Wert für 1 Feld im späteren Model + den erwarteten Wert
                 for (const item of oModel) {
                     const actual = item.LINE_ACTUAL - 1;
 
-                    // Zeile existiert noch nicht im neuen Model --> neue Zeile mit Zeilennummer erstellen für Rückwärts-Mapping
-                    if (!grouped[actual]) {
-                        grouped[actual] = { LINE_ACTUAL: actual, expanded: false, expected: {} };
+                    // Zeile existiert noch nicht im neuen Model
+                    if (!mappedData[actual]) {
+                        // Zeilennummer für Rückwärts-Mapping speichern
+                        mappedData[actual] = { LINE_ACTUAL: actual, expanded: false, expected: {} };
                     }
                     // Ziel-Feld und Wert im Model in der Zeile einfügen
-                    grouped[actual][item.FIELDNAME] = item.VALUE_ACTUAL;
+                    mappedData[actual][item.FIELDNAME] = item.VALUE_ACTUAL;
 
-                    // Ziel-Feld und erwarteter Wert im Model in der "Erwartete-Werte-Struktur" einfügen
-                    grouped[actual]["expected"][item.FIELDNAME] = item.VALUE_EXPECTED;
+                    // Ziel-Feld und erwarteter Wert im Model einfügen
+                    mappedData[actual]["expected"][item.FIELDNAME] = item.VALUE_EXPECTED;
                 }
 
-                let oMappedData = new JSONModel(grouped);
+                // Soll-/Ist-Vergleich der Feldwerte, Speichern von Differenzen
+                for (const item of mappedData) {
+                    for (column of this.tableColumns) {
+                        item[`${column}_ERROR`] = false;
+                        if (item[column] !== item["expected"][column]) {
+                            item[`${column}_ERROR`] = true;
+                        }
+                    }
+                }
+                let oMappedData = new JSONModel(mappedData);
                 this.getView().setModel(oMappedData, "mappedData");
             },
 
             onSearch: function () {
-                let oTable = this.getView().byId("Table");
                 let oFilterBar = this.getView().byId("FilterBar");
 
                 let that = this;
@@ -190,53 +281,8 @@ sap.ui.define(
                     }
                     return aResult;
                 }, []);
-                oTable.getBinding("items").filter(aFilters);
-                oTable.setShowOverlay(false);
-            },
-
-            createTableItem(sId, oContext) {
-                let oColumnListItem = new sap.m.ColumnListItem({
-                    type: "Active",
-                    press: (oEvent) => {
-                        const oItemContext = oEvent.getSource().getBindingContext("mappedData");
-                        const bCurrent = oItemContext.getProperty("expanded");
-                        oItemContext.getModel().setProperty(oItemContext.getPath() + "/expanded", !bCurrent);
-                    },
-                });
-
-                let bWarning = false;
-                this.tableColumns.forEach(function (ColumnName) {
-                    let oVBox = new sap.m.VBox({
-                        fitContainer: true,
-                        alignItems: "Stretch",
-                    });
-
-                    let oNewCell = new sap.m.Text({
-                        text: oContext.getProperty(`${ColumnName}`),
-                    });
-                    oNewCell.addStyleClass("roundCorners");
-                    oVBox.addItem(oNewCell);
-
-                    const sExpected = oContext.getProperty(`expected/${ColumnName}`);
-                    const sActual = oContext.getProperty(`${ColumnName}`);
-                    // let isVisible = oContext.getProperty("expanded");
-                    if (sActual !== sExpected && sExpected) {
-                        oNewCell.addStyleClass("italicText");
-                        // isVisible = true;
-                        bWarning = true;
-                    }
-                    let oExpectedCell = new sap.m.Label({
-                        text: oContext.getProperty(`expected/${ColumnName}`),
-                        visible: oContext.getProperty("expanded"),
-                        wrapping: true,
-                    });
-                    oVBox.addItem(oExpectedCell);
-                    oColumnListItem.addCell(oVBox);
-                });
-                if (bWarning) {
-                    oColumnListItem.addStyleClass("orangeBackground");
-                }
-                return oColumnListItem;
+                const oUiTable = this.getView().byId("UiTable");
+                oUiTable.getBinding("rows").filter(aFilters);
             },
 
             onSelectCard(oEvent) {
