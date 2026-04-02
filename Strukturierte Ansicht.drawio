@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
   <diagram name="Seite-1" id="lBMEEyc_BJLMuaJKhjvF">
-    <mxGraphModel dx="1608" dy="667" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2719" dy="1614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1595,7 +1595,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="bwJL2xHv2fubIopipD7S-163" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=16;" value="DD07T - Domänenfestwerte" vertex="1">
-          <mxGeometry height="174" width="556" x="1500" y="3830" as="geometry" />
+          <mxGeometry height="174" width="556" x="1480" y="3750" as="geometry" />
         </mxCell>
         <mxCell id="bwJL2xHv2fubIopipD7S-164" parent="bwJL2xHv2fubIopipD7S-163" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
           <mxGeometry height="24" width="556" y="30" as="geometry" />
