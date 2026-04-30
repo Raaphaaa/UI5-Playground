@@ -1,11 +1,11 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36">
   <diagram name="Seite-1" id="YM4zC67TErCIlig-4Srz">
-    <mxGraphModel dx="2379" dy="1333" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="3318" dy="881" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
-          <mxGeometry height="120" width="350" x="-730" y="890" as="geometry" />
+          <mxGeometry height="170" width="350" x="-1430" y="810" as="geometry" />
         </mxCell>
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-253" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
           <mxGeometry height="1290" width="590" x="90" y="620" as="geometry" />
@@ -1089,26 +1089,26 @@
         <mxCell id="Lv0tREW0T8N9VX-8bjc9-349" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="&lt;b&gt;JSON-Model:&amp;nbsp;&lt;/b&gt;&lt;div&gt;An &lt;b&gt;Index 1 &amp;amp; 2&lt;/b&gt; werden jeweils für die Felder &lt;b&gt;CARRID, CONNID und PRICE&lt;/b&gt;&amp;nbsp;die gegebenen Werten als &lt;b&gt;Erwartete Werte&lt;/b&gt; hinterlegt&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="510" x="770" y="1790" as="geometry" />
         </mxCell>
-        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Name" vertex="1">
-          <mxGeometry height="40" width="80" x="-630" y="920" as="geometry" />
+        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Name" vertex="1">
+          <mxGeometry height="40" width="80" x="-1330" y="840" as="geometry" />
         </mxCell>
-        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Vorname" vertex="1">
-          <mxGeometry height="40" width="80" x="-550" y="920" as="geometry" />
+        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Vorname" vertex="1">
+          <mxGeometry height="40" width="80" x="-1250" y="840" as="geometry" />
         </mxCell>
-        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Betrieb" vertex="1">
-          <mxGeometry height="40" width="80" x="-470" y="920" as="geometry" />
+        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Betrieb" vertex="1">
+          <mxGeometry height="40" width="80" x="-1170" y="840" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Jannes" vertex="1">
-          <mxGeometry height="40" width="80" x="-630" y="960" as="geometry" />
+          <mxGeometry height="40" width="80" x="-1330" y="880" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Raphael" vertex="1">
-          <mxGeometry height="40" width="80" x="-550" y="960" as="geometry" />
+          <mxGeometry height="40" width="80" x="-1250" y="880" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MIBS AG" vertex="1">
-          <mxGeometry height="40" width="80" x="-470" y="960" as="geometry" />
+          <mxGeometry height="40" width="80" x="-1170" y="880" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-9" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Datenbanktabelle: USER" vertex="1">
-          <mxGeometry height="30" width="170" x="-730" y="890" as="geometry" />
+          <mxGeometry height="30" width="170" x="-1430" y="810" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" value="" vertex="1">
           <mxGeometry height="200" width="350" x="-730" y="1275" as="geometry" />
@@ -1143,11 +1143,11 @@
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-21" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Entity-Attribute-Value Pattern" vertex="1">
           <mxGeometry height="30" width="180" x="-730" y="1275" as="geometry" />
         </mxCell>
-        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;fontStyle=0;" value="Index" vertex="1">
-          <mxGeometry height="40" width="80" x="-710" y="920" as="geometry" />
+        <mxCell id="kZ_LJBYkGQX1LaxWWW_q-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;fontStyle=0;strokeWidth=2;" value="Index" vertex="1">
+          <mxGeometry height="40" width="80" x="-1410" y="840" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="1" vertex="1">
-          <mxGeometry height="40" width="80" x="-710" y="960" as="geometry" />
+          <mxGeometry height="40" width="80" x="-1410" y="880" as="geometry" />
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-24" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="USER" vertex="1">
           <mxGeometry height="40" width="80" x="-710" y="1345" as="geometry" />
@@ -1205,6 +1205,60 @@
         </mxCell>
         <mxCell id="kZ_LJBYkGQX1LaxWWW_q-41" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Speicherung der Daten zusammen mit Tabellenname und Index" vertex="1">
           <mxGeometry height="40" width="140" x="-530" y="1220" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Mustermann" vertex="1">
+          <mxGeometry height="40" width="80" x="-1330" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Max" vertex="1">
+          <mxGeometry height="40" width="80" x="-1250" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MIBS AG" vertex="1">
+          <mxGeometry height="40" width="80" x="-1170" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="2" vertex="1">
+          <mxGeometry height="40" width="80" x="-1410" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" value="" vertex="1">
+          <mxGeometry height="170" width="350" x="-890" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Name" vertex="1">
+          <mxGeometry height="40" width="80" x="-790" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Vorname" vertex="1">
+          <mxGeometry height="40" width="80" x="-710" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Betrieb" vertex="1">
+          <mxGeometry height="40" width="80" x="-630" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Jannes" vertex="1">
+          <mxGeometry height="40" width="80" x="-790" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Raphael" vertex="1">
+          <mxGeometry height="40" width="80" x="-710" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MIBS AG" vertex="1">
+          <mxGeometry height="40" width="80" x="-630" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-12" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontStyle=1" value="Datenbanktabelle: /SMRT/PROTLINES" vertex="1">
+          <mxGeometry height="30" width="170" x="-890" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-13" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;fontStyle=0;strokeWidth=2;" value="Tabellenname" vertex="1">
+          <mxGeometry height="40" width="80" x="-870" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="USER" vertex="1">
+          <mxGeometry height="40" width="80" x="-870" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-15" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Mustermann" vertex="1">
+          <mxGeometry height="40" width="80" x="-790" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-16" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Max" vertex="1">
+          <mxGeometry height="40" width="80" x="-710" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-17" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MIBS AG" vertex="1">
+          <mxGeometry height="40" width="80" x="-630" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="Ulwm3b7cNrhE2SHKzRr5-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eeeeee;strokeColor=#36393d;" value="USER" vertex="1">
+          <mxGeometry height="40" width="80" x="-870" y="800" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
