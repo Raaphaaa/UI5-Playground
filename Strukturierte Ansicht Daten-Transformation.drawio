@@ -1266,7 +1266,7 @@
         <mxCell id="tu4vTC-q-09GxFwOLo65-37" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="Vorname: &lt;span style=&quot;font-weight: normal;&quot;&gt;Raphael&lt;/span&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="-1300" y="895" as="geometry" />
         </mxCell>
-        <mxCell id="tu4vTC-q-09GxFwOLo65-38" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="Name:&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Jannes&lt;/span&gt;&lt;/div&gt;" vertex="1">
+        <mxCell id="tu4vTC-q-09GxFwOLo65-38" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="Name:&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-weight: normal;&quot;&gt;Jannes&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="50" width="90" x="-1300" y="830" as="geometry" />
         </mxCell>
         <mxCell id="tu4vTC-q-09GxFwOLo65-39" edge="1" parent="1" source="tu4vTC-q-09GxFwOLo65-10" style="endArrow=none;html=1;rounded=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;fontStyle=1" target="tu4vTC-q-09GxFwOLo65-36" value="">
