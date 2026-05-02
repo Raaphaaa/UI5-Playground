@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36">
   <diagram name="Seite-1" id="3jQrXUbkpkXriSrU0XMB">
-    <mxGraphModel dx="576" dy="623" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="477" dy="516" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -151,7 +151,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="ALqzAFGdLpMjibV707DT-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=12;fontStyle=1" value="&lt;i&gt;OData-Service&lt;/i&gt;" vertex="1">
-          <mxGeometry height="30" width="100" x="290" y="839.5" as="geometry" />
+          <mxGeometry height="30" width="100" x="289" y="835" as="geometry" />
         </mxCell>
         <mxCell id="ALqzAFGdLpMjibV707DT-17" edge="1" parent="1" source="p2fuqcsDLcX0be0jGYwa-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="ALqzAFGdLpMjibV707DT-10">
           <mxGeometry relative="1" as="geometry" />
