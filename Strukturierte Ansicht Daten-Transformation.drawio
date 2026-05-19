@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36">
   <diagram name="Seite-1" id="YM4zC67TErCIlig-4Srz">
-    <mxGraphModel dx="2937" dy="234" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2928" dy="229" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1452,7 +1452,7 @@
         <mxCell id="tu4vTC-q-09GxFwOLo65-99" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Betrieb" vertex="1">
           <mxGeometry height="40" width="80" x="-1520" y="1690" as="geometry" />
         </mxCell>
-        <mxCell id="tu4vTC-q-09GxFwOLo65-100" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;strokeWidth=2;" value="Wert" vertex="1">
+        <mxCell id="tu4vTC-q-09GxFwOLo65-100" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;strokeWidth=2;" value="Tatsächlicher Wert" vertex="1">
           <mxGeometry height="40" width="80" x="-1440" y="1570" as="geometry" />
         </mxCell>
         <mxCell id="tu4vTC-q-09GxFwOLo65-101" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Jannes" vertex="1">
