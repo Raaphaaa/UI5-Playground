@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36">
   <diagram name="Seite-1" id="YM4zC67TErCIlig-4Srz">
-    <mxGraphModel dx="3394" dy="469" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4424" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2108,6 +2108,33 @@
         </mxCell>
         <mxCell id="tu4vTC-q-09GxFwOLo65-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Zeile 1" vertex="1">
           <mxGeometry height="40" width="80" x="-1510" y="1140" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Name" vertex="1">
+          <mxGeometry height="40" width="80" x="-2110" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Vorname" vertex="1">
+          <mxGeometry height="40" width="80" x="-2030" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;strokeWidth=2;" value="Betrieb" vertex="1">
+          <mxGeometry height="40" width="80" x="-1950" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Jannes" vertex="1">
+          <mxGeometry height="40" width="80" x="-2110" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Raphael" vertex="1">
+          <mxGeometry height="40" width="80" x="-2030" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="MIBS AG" vertex="1">
+          <mxGeometry height="40" width="80" x="-1950" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Mustermann" vertex="1">
+          <mxGeometry height="40" width="80" x="-2110" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Max" vertex="1">
+          <mxGeometry height="40" width="80" x="-2030" y="930" as="geometry" />
+        </mxCell>
+        <mxCell id="DKL31WkajSIIlaBmtE3p-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Muster GmbH" vertex="1">
+          <mxGeometry height="40" width="80" x="-1950" y="930" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
