@@ -129,7 +129,7 @@
         <mxCell id="pzVEyjku7BUUacedq_Iq-59" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="f_qLkDfI-vAPXW7dnXex-2">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-49" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=16;" value="Aggregierter CDS-View: WordCount" vertex="1">
+        <mxCell id="pzVEyjku7BUUacedq_Iq-49" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=16;" value="Aggregierter CDS-View: WordStats" vertex="1">
           <mxGeometry height="187" width="380" x="160" y="260" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-50" parent="pzVEyjku7BUUacedq_Iq-49" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
@@ -174,47 +174,14 @@
         <mxCell id="pzVEyjku7BUUacedq_Iq-62" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Eigene DB, zu viel Rechenaufwand bei &amp;gt;10.000 Wörtern" vertex="1">
           <mxGeometry height="50" width="120" x="540" y="41.5" as="geometry" />
         </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-63" parent="1" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;strokeColor=default;fontSize=16;" value="Aggregierter CDS-View: WordStats" vertex="1">
-          <mxGeometry height="187" width="380" x="160" y="480" as="geometry" />
+        <mxCell id="pzVEyjku7BUUacedq_Iq-73" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Evtl. Zweiter View über diesem, der die prozentualen Anteile am gesamten Wortbestanderrechnet" vertex="1">
+          <mxGeometry height="70" width="170" x="540" y="260" as="geometry" />
         </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-64" parent="pzVEyjku7BUUacedq_Iq-63" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
-          <mxGeometry height="45" width="380" y="30" as="geometry" />
+        <mxCell id="pzVEyjku7BUUacedq_Iq-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CDS View(s) &quot;WordStats&quot;" vertex="1">
+          <mxGeometry height="60" width="100" x="50" y="905" as="geometry" />
         </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-65" parent="pzVEyjku7BUUacedq_Iq-64" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="&lt;b&gt;&lt;u&gt;Wortlänge&lt;/u&gt;&lt;/b&gt;" vertex="1">
-          <mxGeometry height="45" width="120" as="geometry">
-            <mxRectangle height="45" width="120" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-66" parent="pzVEyjku7BUUacedq_Iq-64" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="Words.length" vertex="1">
-          <mxGeometry height="45" width="260" x="120" as="geometry">
-            <mxRectangle height="45" width="260" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-67" parent="pzVEyjku7BUUacedq_Iq-63" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
-          <mxGeometry height="50" width="380" y="75" as="geometry" />
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-68" parent="pzVEyjku7BUUacedq_Iq-67" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="Anzahl" vertex="1">
-          <mxGeometry height="50" width="120" as="geometry">
-            <mxRectangle height="50" width="120" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-69" parent="pzVEyjku7BUUacedq_Iq-67" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="count( * )&amp;nbsp;" vertex="1">
-          <mxGeometry height="50" width="260" x="120" as="geometry">
-            <mxRectangle height="50" width="260" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-70" parent="pzVEyjku7BUUacedq_Iq-63" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=16;" value="" vertex="1">
-          <mxGeometry height="62" width="380" y="125" as="geometry" />
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-71" parent="pzVEyjku7BUUacedq_Iq-70" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="" vertex="1">
-          <mxGeometry height="62" width="120" as="geometry">
-            <mxRectangle height="62" width="120" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-72" parent="pzVEyjku7BUUacedq_Iq-70" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=16;" value="GROUP BY Words.length" vertex="1">
-          <mxGeometry height="62" width="260" x="120" as="geometry">
-            <mxRectangle height="62" width="260" as="alternateBounds" />
-          </mxGeometry>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-75" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-180;" value="" vertex="1">
+          <mxGeometry height="90" width="50" y="890" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
