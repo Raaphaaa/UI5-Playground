@@ -85,13 +85,16 @@
         <mxCell id="pzVEyjku7BUUacedq_Iq-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Anzahl Kreuzungen ermitteln" vertex="1">
           <mxGeometry height="50" width="180" x="-200" y="560" as="geometry" />
         </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="prozentualer Anteil =&amp;nbsp;&lt;br&gt;Kreuzungen / Wortlänge" vertex="1">
+        <mxCell id="pzVEyjku7BUUacedq_Iq-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="anteilKreuzungen =&amp;nbsp;&lt;br&gt;Kreuzungen / Wortlänge" vertex="1">
           <mxGeometry height="50" width="180" x="-200" y="640" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Länge des kreuzenden Wortes ermitteln" vertex="1">
           <mxGeometry height="50" width="180" x="-200" y="790" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-41" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pzVEyjku7BUUacedq_Iq-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-77" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pzVEyjku7BUUacedq_Iq-76">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-39" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
@@ -120,7 +123,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="pzVEyjku7BUUacedq_Iq-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Kreuzungsscore += score" vertex="1">
+        <mxCell id="pzVEyjku7BUUacedq_Iq-47" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="gesamt += score" vertex="1">
           <mxGeometry height="50" width="180" x="-200" y="1040" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-48" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0.077;entryDx=0;entryDy=0;entryPerimeter=0;" target="pzVEyjku7BUUacedq_Iq-47">
@@ -178,10 +181,34 @@
           <mxGeometry height="70" width="170" x="540" y="260" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-74" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="CDS View(s) &quot;WordStats&quot;" vertex="1">
-          <mxGeometry height="60" width="100" x="50" y="905" as="geometry" />
+          <mxGeometry height="60" width="100" x="20" y="905" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-75" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.annotation_2;align=left;labelPosition=right;pointerEvents=1;rotation=-180;" value="" vertex="1">
-          <mxGeometry height="90" width="50" y="890" as="geometry" />
+          <mxGeometry height="90" width="50" x="-20" y="890" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-83" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-76" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-82">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-76" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="avgKreuzungsscore = gesamt / anzahlKreuzungen" vertex="1">
+          <mxGeometry height="50" width="180" x="30" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-85" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-78" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-78" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Score bilden aus:&lt;br&gt;- anteilKreuzungen&amp;nbsp;&lt;div&gt;- scoreWortlänge&lt;br&gt;- kreuzungsscore&lt;br&gt;- Wortlänge!!&lt;/div&gt;" vertex="1">
+          <mxGeometry height="75" width="170" x="244" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-80" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Dummys sortieren nach schlechtestem Score" vertex="1">
+          <mxGeometry height="60" width="120" x="269" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-81" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;z.B. (anteilKreuzungen + avgKreuzungsscore) / Länge * scoreWortlänge&lt;/div&gt;&lt;div&gt;--&amp;gt; lange Wörter mit schlechten Scores bekommen die schlechteste Bewertung&lt;/div&gt;" vertex="1">
+          <mxGeometry height="65" width="314" x="416" y="805" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-84" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-82" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-78">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="scoreWortlänge = prozentualer Anteil der Dummy-Wortlänge am gesamten Wortbestand" vertex="1">
+          <mxGeometry height="50" width="180" x="239" y="715" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
