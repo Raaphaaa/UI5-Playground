@@ -344,7 +344,7 @@
           <mxGeometry height="100" width="290" x="1096" y="1530" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-139" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Evtl. nach jedem Befüllten Dummy den Score der kreuzenden anpassen, sodass auch berücksichtigt wird, wieviele Buchstaben bereits vorbelegt sind. Alternativ selektieren, wieviel Wortmöglichkeiten jeder Dummy im aktuellen Grid hat und danach priorisieren... könnte aber sehr rechenintensiv werden" vertex="1">
-          <mxGeometry height="180" width="220" x="740" y="1630" as="geometry" />
+          <mxGeometry height="180" width="220" x="740" y="1570" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
