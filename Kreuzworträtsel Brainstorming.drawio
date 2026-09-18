@@ -1,0 +1,40 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Seite-1" id="3KAhsW5U1lXiZfawerrV">
+    <mxGraphModel dx="2001" dy="603" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-1" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;" value="Words" vertex="1">
+          <mxGeometry height="70" width="110" x="150" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-13" edge="1" parent="1" source="f_qLkDfI-vAPXW7dnXex-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=diamond;startFill=1;" target="f_qLkDfI-vAPXW7dnXex-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-2" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="Words" vertex="1">
+          <mxGeometry height="78" width="140" x="-90" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-3" parent="f_qLkDfI-vAPXW7dnXex-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="Word" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-4" parent="f_qLkDfI-vAPXW7dnXex-2" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="Length" vertex="1">
+          <mxGeometry height="26" width="140" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-8" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" value="Descriptions" vertex="1">
+          <mxGeometry height="78" width="140" x="-340" y="96" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-11" parent="f_qLkDfI-vAPXW7dnXex-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="Word" vertex="1">
+          <mxGeometry height="26" width="140" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-12" parent="f_qLkDfI-vAPXW7dnXex-8" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="Description" vertex="1">
+          <mxGeometry height="26" width="140" y="52" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="0..*" vertex="1">
+          <mxGeometry height="30" width="60" x="-210" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="f_qLkDfI-vAPXW7dnXex-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="-140" y="110" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
