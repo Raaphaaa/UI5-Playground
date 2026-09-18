@@ -199,7 +199,7 @@
           <mxGeometry height="75" width="170" x="244" y="800" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-80" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Dummys sortieren nach schlechtestem Score" vertex="1">
-          <mxGeometry height="60" width="120" x="269" y="920" as="geometry" />
+          <mxGeometry height="60" width="120" x="269" y="910" as="geometry" />
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-81" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;div&gt;z.B. (anteilKreuzungen + avgKreuzungsscore) / Länge * scoreWortlänge&lt;/div&gt;&lt;div&gt;--&amp;gt; lange Wörter mit schlechten Scores bekommen die schlechteste Bewertung&lt;/div&gt;" vertex="1">
           <mxGeometry height="65" width="314" x="416" y="805" as="geometry" />
@@ -209,6 +209,142 @@
         </mxCell>
         <mxCell id="pzVEyjku7BUUacedq_Iq-82" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="scoreWortlänge = prozentualer Anteil der Dummy-Wortlänge am gesamten Wortbestand" vertex="1">
           <mxGeometry height="50" width="180" x="239" y="715" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-92" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-89" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-89" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Dummy befüllen" vertex="1">
+          <mxGeometry height="60" width="120" x="599" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-90" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="checkIntersectingDummys()" vertex="1">
+          <mxGeometry height="60" width="191" x="563.5" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-91" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Alle kreuzenden Dummys prüfen: Existiert noch min. 1 Wort, mit dem der Dummy befüllt werden kann?&lt;div&gt;--&amp;gt; Regex mit aktuell befüllten Buchstabenfeldern (siehe Logik aus altem KWR)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="290" x="1080" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-97" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-95">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="1430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-98" connectable="0" parent="pzVEyjku7BUUacedq_Iq-97" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="min. 1 Dummy&lt;div&gt;&amp;nbsp;ohne&amp;nbsp;&lt;div&gt;mögliche Wörter&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.5359" y="1" as="geometry">
+            <mxPoint x="33" y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-106" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-94" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-94" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="629" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-96" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-95" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-124">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-95" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="nextWord() bei aktuellem Dummy" vertex="1">
+          <mxGeometry height="60" width="120" x="820" y="1370" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-99" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-90" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="pzVEyjku7BUUacedq_Iq-94">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-111" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-110">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-100" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&quot;schlechtesten&quot; Dummy aus den kreuzenden auswählen" vertex="1">
+          <mxGeometry height="60" width="191" x="280" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-102" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="pzVEyjku7BUUacedq_Iq-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="schlechtesten Dummy auswählen" vertex="1">
+          <mxGeometry height="60" width="120" x="599" y="1090" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-107" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pzVEyjku7BUUacedq_Iq-100">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-108" connectable="0" parent="pzVEyjku7BUUacedq_Iq-107" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="leere angrenzede&amp;nbsp;&lt;div&gt;Dummys vorhanden?&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.3237" y="2" as="geometry">
+            <mxPoint x="-17" y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-114" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-105" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-113">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-105" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="629" y="1450" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-122" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-110" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-110" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="345.5" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-116" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-115">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-117" connectable="0" parent="pzVEyjku7BUUacedq_Iq-116" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="leere Dummys im&amp;nbsp;&lt;div&gt;Grid verbleibend?&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0346" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-113" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="629" y="1530" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-123" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-115" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-110">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="1210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-115" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="&quot;schlechtesten&quot; Dummy aus den verbleibenden auswählen" vertex="1">
+          <mxGeometry height="60" width="191" x="120" y="1530" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-120" parent="1" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
+          <mxGeometry height="30" width="30" x="644" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-121" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-113" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.48;entryY=0.22;entryDx=0;entryDy=0;entryPerimeter=0;" target="pzVEyjku7BUUacedq_Iq-120">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-130" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-129">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-131" connectable="0" parent="pzVEyjku7BUUacedq_Iq-130" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="keine Wörter für&amp;nbsp;&lt;div&gt;den aktuellen Dummy&amp;nbsp;&lt;/div&gt;&lt;div&gt;mehr verfügbar&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="0.0299" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-136" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-124" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-90">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-124" parent="1" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.decision;whiteSpace=wrap;" value="" vertex="1">
+          <mxGeometry height="60" width="60" x="850" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-134" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-129" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="pzVEyjku7BUUacedq_Iq-132">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-129" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="aktuellen Dummy clearen" vertex="1">
+          <mxGeometry height="60" width="120" x="1064" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-133" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-132" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="pzVEyjku7BUUacedq_Iq-89">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-132" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="nextWord() bei vorherigem Dummy" vertex="1">
+          <mxGeometry height="60" width="120" x="1064" y="1180" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-137" edge="1" parent="1" source="pzVEyjku7BUUacedq_Iq-91" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" target="pzVEyjku7BUUacedq_Iq-90" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="790" y="1400" as="sourcePoint" />
+            <mxPoint x="840" y="1350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-138" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="nextWord() --&amp;gt; Priorisieren der möglichen Wörter anhand der Stats in &quot;Evaluations&quot;:&lt;div&gt;d.h. bei kreuzenden Dummys schauen, an welcher Position ein Buchstabe stehen würde --&amp;gt; anhand der &quot;Evaluations&quot; scores für die möglichen Wörter bilden&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="290" x="1096" y="1530" as="geometry" />
+        </mxCell>
+        <mxCell id="pzVEyjku7BUUacedq_Iq-139" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Evtl. nach jedem Befüllten Dummy den Score der kreuzenden anpassen, sodass auch berücksichtigt wird, wieviele Buchstaben bereits vorbelegt sind. Alternativ selektieren, wieviel Wortmöglichkeiten jeder Dummy im aktuellen Grid hat und danach priorisieren... könnte aber sehr rechenintensiv werden" vertex="1">
+          <mxGeometry height="180" width="220" x="740" y="1630" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
